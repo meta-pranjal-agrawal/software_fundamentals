@@ -1,0 +1,217 @@
+import java.util.ArrayList;
+
+import java.util.Scanner;
+
+
+public class Shopping
+{
+	public static class Cart
+	{
+		Scanner sc= new Scanner(System.in);
+		ArrayList<String> items= new ArrayList<String>();
+		ArrayList<Integer> qty= new ArrayList<Integer>();
+		ArrayList<Integer> rate= new ArrayList<Integer>();
+		ArrayList<Integer> totalprice= new ArrayList<Integer>();
+
+		
+		public void additem()
+		{
+			System.out.println("enter the item you want to enter");
+			System.out.println("press 1 for milk");
+			System.out.println("press 2 for eggs");
+			System.out.println("press 3 for butter");
+			int itemid;
+			try{
+			 itemid=sc.nextInt();
+			}
+			catch(Exception e)
+			{
+				System.out.println("Incorrect output");
+				return;
+			}
+			
+			if(itemid==1)
+				{
+					int flag=0;
+					for(int i=0;i<items.size();i++)
+					{
+						if(items.contains("milk"))
+							flag=1;
+					}
+					if(flag==0)
+					{
+						System.out.println("Enter the quantity");
+						int quantity = sc.nextInt();
+						items.add("milk");
+						qty.add(quantity);
+						rate.add(10);
+						totalprice.add(quantity*10);
+					}
+					else
+					{
+						System.out.println("Item already exists");
+					}
+				}
+			
+			
+			if(itemid==2)
+				{
+					int flag=0;
+					for(int i=0;i<items.size();i++)
+					{
+						if(items.contains("eggs"))
+						flag=1;
+					}
+					if(flag==0)
+					{	
+						System.out.println("Enter the quantity");
+						int quantity = sc.nextInt();		
+						items.add("eggs");
+						qty.add(quantity);
+						rate.add(5);
+						totalprice.add(quantity*5);
+					}
+					else
+					{
+						System.out.println("Item already exists");
+					}
+				}
+			
+			
+			if(itemid==3)
+				{
+					int flag=0;
+					for(int i=0;i<items.size();i++)
+					{
+						if(items.contains("eggs"))
+							flag=1;
+					}
+					if(flag==0)
+					{		
+						System.out.println("Enter the quantity");
+						int quantity = sc.nextInt();
+						items.add("butter");
+						qty.add(quantity);
+						rate.add(50);
+						totalprice.add(quantity*50);
+					}
+					else
+					{
+						System.out.println("Item already exists");
+					}
+				}
+		}
+		
+		
+		public void delete()
+		{
+			System.out.println("Enter the name of the item you want to delete");
+			String itemname =sc.next().toLowerCase();
+		
+			for (int i=0;i<items.size();i++)
+			{
+				if(itemname.equals(items.get(i)))
+				{
+					items.remove(i);
+					rate.remove(i);
+					qty.remove(i);
+					totalprice.remove(i);
+					break;
+				}
+			}
+			
+		}
+		
+		public void updateitem()
+		{
+			System.out.println("Enter the name of the item you want to update");
+			String itemname=sc.next().toLowerCase();
+			int p=0;
+			int flag=0;
+			for(p=0;p<items.size();p++)
+			{
+				if(itemname.equals(items.get(p)))
+				{
+					flag=1;
+					System.out.println("Enter the new quantity");
+					int newqty=sc.nextInt();
+					qty.set(p,newqty);
+					break;
+				}
+			}
+			if(flag==0)
+			{
+				System.out.println("Item not found");
+			}
+			
+		}
+		
+		public void getbill()
+		{
+			int total=0;
+			System.out.println("Items"+"\t\t"+"Quantity"+"\t\t"+"Rate"+"\t\t"+"Total price");
+			for (int i=0;i<items.size();i++)
+			{
+				System.out.println(items.get(i)+"\t\t"+qty.get(i)+"\t\t\t"+rate.get(i)+"\t\t"+totalprice.get(i));
+				total=total+totalprice.get(i);
+			}
+			System.out.println("grand total:\t\t\t\t\t\t"+total);
+			
+		}
+		public void getcontents()
+		{
+			System.out.println("item\t\t"+"quantity\t\t");
+			for(int i=0;i<items.size();i++)
+			{
+				System.out.println(items.get(i)+"\t\t"+qty.get(i));
+			}
+		}
+	}
+	
+	
+	public static void main(String arg[])
+	{
+		Cart cart= new Cart();
+		Scanner sc1=new Scanner(System.in);
+		for(int i=0;i<100;i++)
+		{
+			int choice;
+			System.out.println("press\n1. add item\n2. remove item \n3. update item \n4. view cart\n5. generate bill\n6. exit");
+			try{
+				
+			choice=sc1.nextInt();
+			}
+			catch(Exception e)
+			{
+				System.out.println("Enter correct output");
+				choice =6;
+			}
+			switch(choice)
+			{
+			case 1:
+				cart.additem();
+				break;
+			case 2:
+				cart.delete();
+				break;
+			case 3: 
+				cart.getcontents();
+				cart.updateitem();
+				cart.getcontents();
+				break;
+			case 4:
+				cart.getcontents();
+				break;
+			case 5:
+				cart.getbill();
+				break;
+			case 6:
+				System.exit(0);
+				break;
+				
+				
+			}
+		}
+		sc1.close();
+	}
+}
