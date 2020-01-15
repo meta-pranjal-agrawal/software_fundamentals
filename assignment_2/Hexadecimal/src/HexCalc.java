@@ -49,7 +49,7 @@ public class HexCalc
 	}	
 	public boolean isequal(String hexa1,String hexa2)
 	{
-		if(hexa1==hexa2)
+		if(hexa1.equals(hexa2))
 			return true;
 		else
 			return false;
@@ -57,10 +57,27 @@ public class HexCalc
 	}
 	public boolean isfirstbigger(String hexa1,String hexa2)
 	{
-		if(hexa1.compareTo(hexa2)>0)
-			return true;
+		
+		if(hexa1.length()==hexa2.length())
+		{
+			if(hexa1.compareTo(hexa2)>0)
+				return true;
+			else
+				return false;
+		}
+		
 		else
-			return false;
+		{
+			if(hexa1.length()>hexa2.length())
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		
 	}
 	
 	public static void main(String arg[])
@@ -90,15 +107,16 @@ public class HexCalc
 		else
 		{
 			System.out.println("They are not equal");
+			if(compare)
+			{
+				System.out.println(hex1+" is bigger");
+			}
+			else
+			{
+				System.out.println(hex2+" is bigger");
+			}
 		}
-		if(compare)
-		{
-			System.out.println("first is bigger");
-		}
-		else
-		{
-			System.out.println("second is bigger");
-		}
+		
 		
 	
 	}
