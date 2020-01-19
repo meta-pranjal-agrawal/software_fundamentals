@@ -49,7 +49,9 @@ public class ArrOperationTest
 		
 		ArrOperation arroperation= new ArrOperation();
 		int clumps=arroperation.NumberofClumps(new int[]{1,2,2,3,4,4},6);
-		assertEquals(2,clumps);			
+		assertEquals(2,clumps);
+		
+				
 	}
 	
 	@Test
@@ -71,15 +73,6 @@ public class ArrOperationTest
 		assertEquals(1,clumps);
 		
 	} 
-	
-	@Test
-	public void NumberofClumpsTest4()
-	{
-		
-		ArrOperation arroperation= new ArrOperation();
-		int clumps=arroperation.NumberofClumps(new int[]{},0);
-		assertEquals(-1,clumps);			
-	}
 	
 	
 	@Test
@@ -112,21 +105,10 @@ public class ArrOperationTest
 		ArrOperation arroperation= new ArrOperation();
 		int []sortedarr=arroperation.FixXY(new int[]{1,4,1,5,5,4,1}, 4, 5, 7);
 		int []expectedresult=new int[]{1,4,5,1,1,4,5};
-		assertArrayEquals(expectedresult,sortedarr);		
-	}
-	
-	@Test
-	public void FixXYTest4()
-	{
+		assertArrayEquals(expectedresult,sortedarr);
 		
-		ArrOperation arroperation= new ArrOperation();
-		int []sortedarr=arroperation.FixXY(new int[]{1,4,4,5,5,4,1}, 4, 5, 7);
-		int []expectedresult=new int[]{-1};
-		assertArrayEquals(expectedresult,sortedarr);		
+		
 	}
-	
-	
-	
 	
 	@Test
 	public void SplitArrayTest1()
@@ -155,16 +137,6 @@ public class ArrOperationTest
 		ArrOperation arroperation= new ArrOperation();
 		int index=arroperation.SplitArray(new int[]{10,10}, 2);
 		assertEquals(1,index);
-		
-	}
-	
-	@Test
-	public void SplitArrayTest4()
-	{
-		
-		ArrOperation arroperation= new ArrOperation();
-		int index=arroperation.SplitArray(new int[]{}, 0);
-		assertEquals(-2,index);
 		
 	}
 	

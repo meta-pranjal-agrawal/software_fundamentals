@@ -11,17 +11,13 @@ public class ArrOperation
 	 * @param size
 	 * @return size of maximum mirror section
 	 */
-	public int Mirror(int []arr,int size) throws AssertionError
+	public int Mirror(int []arr,int size)
 	{
-		try
-		{
 		int max=0;
 		
 		if(arr.length==0)
 		{
-			
-				throw new AssertionError(); 
-			
+			throw new AssertionError(); 
 		}
 		int [][]matrix=new int[size+1][size+1];
 		for(int i=0;i<=size;i++)
@@ -49,15 +45,7 @@ public class ArrOperation
 			
 		}
 		
-		
-		
 		return max;
-		}
-		
-		catch(AssertionError e)
-		{
-			return -1;
-		}
 	}
 	
 	/**
@@ -66,10 +54,8 @@ public class ArrOperation
 	 * @param size
 	 * @return
 	 */
-	public int SplitArray(int []arr,int size) throws AssertionError
+	public int SplitArray(int []arr,int size)
 	{
-		try
-		{
 		int index=-1;
 		if(arr.length==0)
 		{
@@ -98,12 +84,7 @@ public class ArrOperation
 		}
 		
 		return index;
-		}
 		
-		catch(AssertionError e)
-		{
-			return -2;
-		}
 	}
 	
 	/**
@@ -112,10 +93,8 @@ public class ArrOperation
 	 * @param size
 	 * @return number of clumps in the array
 	 */
-	public int NumberofClumps(int []arr,int size) throws AssertionError
+	public int NumberofClumps(int []arr,int size)
 	{
-		try
-		{
 		if(arr.length==0)
 		{
 			throw new AssertionError();
@@ -140,11 +119,6 @@ public class ArrOperation
 		}
 		
 		return count;
-		}
-		catch(AssertionError e)
-		{
-			return -1;
-		}
 		
 	}
 	/**
@@ -156,11 +130,8 @@ public class ArrOperation
 	 * @return arranged array
 	 */
 	
-	public int[] FixXY(int []arr,int x,int y,int size) throws AssertionError
+	public int[] FixXY(int []arr,int x,int y,int size)
 	{
-		try
-		{
-		
 		int []new_arr=arr;
 		int countx=0,county=0;
 		List <Integer>posx=new ArrayList<Integer>();
@@ -199,7 +170,6 @@ public class ArrOperation
 			throw new AssertionError();
 		}
 		
-		
 		for(int i=0;i<countx;i++)
 		{
 			int temp=new_arr[posx.get(i)+1];
@@ -208,11 +178,6 @@ public class ArrOperation
 		}
 		
 		return new_arr;
-		}
-		catch(AssertionError e)
-		{
-			return new int[]{-1};
-		}
 	}
 	
 	

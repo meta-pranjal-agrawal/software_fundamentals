@@ -102,7 +102,7 @@ public class ArrOperation
 		
 		catch(AssertionError e)
 		{
-			return -2;
+			return -1;
 		}
 	}
 	
@@ -161,7 +161,8 @@ public class ArrOperation
 		try
 		{
 		
-		int []new_arr=arr;
+		int []new_arr=new int[arr.length];
+			new_arr=arr;
 		int countx=0,county=0;
 		List <Integer>posx=new ArrayList<Integer>();
 		List <Integer>posy=new ArrayList<Integer>();

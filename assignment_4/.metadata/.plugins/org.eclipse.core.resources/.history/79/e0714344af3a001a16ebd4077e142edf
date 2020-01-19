@@ -102,7 +102,7 @@ public class ArrOperation
 		
 		catch(AssertionError e)
 		{
-			return -2;
+			return -1;
 		}
 	}
 	

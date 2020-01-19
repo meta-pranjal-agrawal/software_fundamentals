@@ -13,8 +13,6 @@ public class ArrOperation
 	 */
 	public int Mirror(int []arr,int size) throws AssertionError
 	{
-		try
-		{
 		int max=0;
 		
 		if(arr.length==0)
@@ -50,14 +48,7 @@ public class ArrOperation
 		}
 		
 		
-		
 		return max;
-		}
-		
-		catch(AssertionError e)
-		{
-			return -1;
-		}
 	}
 	
 	/**
@@ -68,8 +59,6 @@ public class ArrOperation
 	 */
 	public int SplitArray(int []arr,int size) throws AssertionError
 	{
-		try
-		{
 		int index=-1;
 		if(arr.length==0)
 		{
@@ -98,12 +87,7 @@ public class ArrOperation
 		}
 		
 		return index;
-		}
 		
-		catch(AssertionError e)
-		{
-			return -2;
-		}
 	}
 	
 	/**
@@ -114,8 +98,6 @@ public class ArrOperation
 	 */
 	public int NumberofClumps(int []arr,int size) throws AssertionError
 	{
-		try
-		{
 		if(arr.length==0)
 		{
 			throw new AssertionError();
@@ -140,11 +122,6 @@ public class ArrOperation
 		}
 		
 		return count;
-		}
-		catch(AssertionError e)
-		{
-			return -1;
-		}
 		
 	}
 	/**
@@ -158,9 +135,6 @@ public class ArrOperation
 	
 	public int[] FixXY(int []arr,int x,int y,int size) throws AssertionError
 	{
-		try
-		{
-		
 		int []new_arr=arr;
 		int countx=0,county=0;
 		List <Integer>posx=new ArrayList<Integer>();
@@ -208,11 +182,6 @@ public class ArrOperation
 		}
 		
 		return new_arr;
-		}
-		catch(AssertionError e)
-		{
-			return new int[]{-1};
-		}
 	}
 	
 	

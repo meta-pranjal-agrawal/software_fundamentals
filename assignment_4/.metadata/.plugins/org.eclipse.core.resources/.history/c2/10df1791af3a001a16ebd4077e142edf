@@ -158,14 +158,4 @@ public class ArrOperationTest
 		
 	}
 	
-	@Test
-	public void SplitArrayTest4()
-	{
-		
-		ArrOperation arroperation= new ArrOperation();
-		int index=arroperation.SplitArray(new int[]{}, 0);
-		assertEquals(-2,index);
-		
-	}
-	
 }

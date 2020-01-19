@@ -125,9 +125,6 @@ public class ArrOperationTest
 		assertArrayEquals(expectedresult,sortedarr);		
 	}
 	
-	
-	
-	
 	@Test
 	public void SplitArrayTest1()
 	{
@@ -155,16 +152,6 @@ public class ArrOperationTest
 		ArrOperation arroperation= new ArrOperation();
 		int index=arroperation.SplitArray(new int[]{10,10}, 2);
 		assertEquals(1,index);
-		
-	}
-	
-	@Test
-	public void SplitArrayTest4()
-	{
-		
-		ArrOperation arroperation= new ArrOperation();
-		int index=arroperation.SplitArray(new int[]{}, 0);
-		assertEquals(-2,index);
 		
 	}
 	
