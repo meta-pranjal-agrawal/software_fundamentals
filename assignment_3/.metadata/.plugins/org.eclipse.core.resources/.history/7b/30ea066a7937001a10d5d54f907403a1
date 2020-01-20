@@ -1,0 +1,103 @@
+import java.util.Scanner;
+
+
+public class Marksheet
+{
+	public float Calculate_Average(int grades[])
+	{
+		float Average=0;
+		int sum=0;
+		for(int i=0;i<grades.length;i++)
+		{
+			sum=sum+grades[i];
+		}
+		
+		Average=(float) (sum/grades.length);
+		
+		return Average;
+		
+	}
+	public int Calculate_Max(int grades[])
+	{
+		int max=grades[0];
+		for(int i=0;i<grades.length;i++)
+		{
+			if(max<grades[i])
+			{
+				max=grades[i];
+			}
+		}
+		
+		return max;
+	}
+	
+	public int Calculate_Min(int grades[])
+	{
+		int min=grades[0];
+		for(int i=0;i<grades.length;i++)
+		{
+			if(min>grades[i])
+			{
+				min=grades[i];
+			}
+		}
+		
+		
+		return min;
+	}
+	
+	public float Students_Passed(int grades[])
+	{
+		float Percent_Students_Passed=0;
+		int count=0;
+		for(int i=0;i<grades.length;i++)
+		{
+			if(grades[i]>=40)
+			{
+				count=count+1;
+			}
+			//System.out.println(count);
+		}
+		
+		Percent_Students_Passed=(float) (count*100/grades.length);
+	
+		return Percent_Students_Passed;
+	}
+
+	public static void main(String[] args)
+	{
+		Marksheet marksheet = new Marksheet();
+		Scanner sc= new Scanner(System.in);
+		System.out.println("enter the no of students");
+		int no_of_students=sc.nextInt();
+		int grades[]= new int[no_of_students];
+		System.out.println("Enter the grades of each student");
+		for(int i=0;i<no_of_students;i++)
+		{
+			int grade=sc.nextInt();
+			if(grade>=0 && grade<=100)
+			{
+				grades[i]=grade;
+			}
+			else
+			{
+				System.out.println("Incorrect input : enter the grade between 0 and 100 \ntry again");
+				System.exit(0);
+			}
+		}
+		
+		float Average= marksheet.Calculate_Average(grades);
+		System.out.println("Average of the students' grades is = "+Average);
+		
+		int Maximum=marksheet.Calculate_Max(grades);
+		System.out.println("Maximum grade of the students' grades is = "+Maximum);
+		
+		int Min= marksheet.Calculate_Min(grades);
+		System.out.println("Minimum grade of the students' grades is = "+Min);
+		
+		float Percent_Students_Passed=marksheet.Students_Passed(grades);
+		System.out.println("The percentage of students passed= "+Percent_Students_Passed);
+		
+	}
+
+}

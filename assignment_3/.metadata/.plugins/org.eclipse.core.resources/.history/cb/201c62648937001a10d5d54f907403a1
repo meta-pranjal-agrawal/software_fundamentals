@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+
+public class Area 
+{
+
+	public float Area_of_Triangle(float triangle_base,float triangle_height)
+	{
+		float Area_Triangle;
+		Area_Triangle=(1/2)*triangle_base*triangle_height;
+		return Area_Triangle;
+	}
+	
+	public float Area_of_Rectangle(float width_rectangle, float height_rectangle)
+	{
+		float Area_Rectangle=width_rectangle*height_rectangle;
+		return Area_Rectangle;
+	}
+	public float Area_of_Square(float side_square)
+	{
+		float Area_square=side_square*side_square;
+		return Area_square;
+	}
+
+	public static void main(String[] args) 
+	{
+		Area area= new Area();
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Calculating area of triangle..");
+		System.out.println("enter the base of triangle");
+		float base_triangle=sc.nextFloat();
+		System.out.println("enter the height of triangle");
+		float height_triangle=sc.nextFloat();
+		float area_triangle= area.Area_of_Triangle(base_triangle,height_triangle);
+		System.out.println("The area of triangle="+area_triangle);
+		
+		System.out.println("Calculating area of Rectangle..");
+		System.out.println("enter the width of rectangle");
+		float width_rectangle=sc.nextFloat();
+		System.out.println("enter the height of triangle");
+		float height_rectangle=sc.nextFloat();
+		float area_rectangle=area.Area_of_Rectangle(width_rectangle,height_rectangle);
+		System.out.println("The area of rectangle="+area_rectangle);
+		
+		System.out.println("Calculating area of Sqaure..");
+		System.out.println("enter the side of square");
+		float side_square=sc.nextFloat();
+		
+		float area_square=area.Area_of_Square(side_square);
+		System.out.println("The area of sqaure="+area_square);
+		
+		
+	}
+
+}
