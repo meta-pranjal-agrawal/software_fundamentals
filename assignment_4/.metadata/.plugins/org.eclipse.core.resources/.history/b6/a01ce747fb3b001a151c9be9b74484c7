@@ -27,23 +27,23 @@ public class ArrOperation
 		
 		for(int i=0; i<=size; i++)
 		{
-			for(int j=0; j<=size; j++)
+			for(int j=0;j<=size;j++)
 			{
-				if(i==0 || j==0)
+				if(i==0||j==0)
 				{
-					matrix[i][j] = 0;
+					matrix[i][j]=0;
 				}
-				else if(arr[i-1] == arr[size-j])
+				else if(arr[i-1]==arr[size-j])
 				{
-					matrix[i][j] = matrix[i-1][j-1]+1;
+					matrix[i][j]=matrix[i-1][j-1]+1;
 				}
 				else
 				{
-					matrix[i][j] = 0;
+					matrix[i][j]=0;
 				}
-				if(max< matrix[i][j])
+				if(max<matrix[i][j])
 				{
-					max= matrix[i][j];
+					max=matrix[i][j];
 				}
 				
 			}
@@ -67,30 +67,29 @@ public class ArrOperation
 	{
 		
 		int index=-1;
-		
-		if(arr.length == 0)
+		if(arr.length==0)
 		{
 			throw new AssertionError();
 		}
 		
-		int leftarr = arr[0], rightarr=0;
+		int leftarr=arr[0],rightarr=0;
 		
 		
-		for(int i=0; i<size-1; i++)
+		for(int i=0;i<size-1;i++)
 		{
-			rightarr =0;
-			for(int j=i+1; j<size; j++)
+			rightarr=0;
+			for(int j=i+1;j<size;j++)
 			{
-				rightarr= rightarr + arr[j];
+				rightarr=rightarr+arr[j];
 			}
-			if(leftarr == rightarr)
+			if(leftarr==rightarr)
 			{
-				index= i+1;
+				index=i+1;
 				return index;
 			}
 			else
 			{
-				leftarr= leftarr + arr[i+1];
+				leftarr=leftarr+arr[i+1];
 			}
 		}
 		
@@ -109,22 +108,20 @@ public class ArrOperation
 	{
 		if(size == 0)
 			throw new AssertionError("Assertion Error occured");
-		
 		int count=0;
-		int element =-1;
-		
-		for(int i=0; i<size-1; i++)
+		int element=-1;
+		for(int i=0;i<size-1;i++)
 		{
-			if(arr[i] == arr[i+1] && element != arr[i])
+			if(arr[i]==arr[i+1] && element!=arr[i])
 			{
 				count++;
-				element = arr[i];
+				element=arr[i];
 			}
 			else
 			{
-				if(arr[i]!= element)
+				if(arr[i]!=element)
 				{
-					element = -1;
+					element=-1;
 				}
 			}
 			
@@ -148,7 +145,7 @@ public class ArrOperation
 		try
 		{
 		
-		int []newarr= arr;
+		int []newarr=arr;
 		
 		int countx=0,county=0;
 		
@@ -157,17 +154,17 @@ public class ArrOperation
 		
 		for(int i=0; i<size; i++)
 		{
-				if(newarr[i] == x) 
+				if(newarr[i]==x) 
 				{
 					posx.add(i);
 					countx++;
 				}
-				if(newarr[i] == y)
+				if(newarr[i]==y)
 				{
 					posy.add(i);
 					county++;
 				}
-				if(i< size-1)
+				if(i<size-1)
 				{
 				if(newarr[i] == newarr[i+1] && newarr[i]== x)
 				{
@@ -192,9 +189,9 @@ public class ArrOperation
 		
 		for(int i=0;i<countx;i++)
 		{
-			int temp= newarr[posx.get(i)+1];
-			newarr[posx.get(i)+1] = newarr[posy.get(i)];
-			newarr[posy.get(i)] = temp;
+			int temp=newarr[posx.get(i)+1];
+			newarr[posx.get(i)+1]=newarr[posy.get(i)];
+			newarr[posy.get(i)]=temp;
 		}
 		
 		return newarr;
@@ -233,7 +230,7 @@ public class ArrOperation
 		
 		int newarr[];
 		newarr=arroperation.fixXY(arr, x, y,size);
-		for(int i=0; i<size; i++)
+		for(int i=0;i<size;i++)
 		{
 			System.out.println(newarr[i]);
 		}

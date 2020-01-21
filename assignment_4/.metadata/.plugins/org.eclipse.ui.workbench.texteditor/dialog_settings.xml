@@ -2,16 +2,30 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="isRegEx"/>
-		<item value="NumberofClumps" key="selection"/>
+		<item value="newarr" key="selection"/>
 		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="true" key="wholeword"/>
 		<list key="findhistory">
-			<item value="No_of_Clumps"/>
+			<item value="new_arr"/>
+			<item value="SplitArray"/>
+			<item value="SplitArrayTest"/>
+			<item value="NumberofClumps"/>
+			<item value="NumberofClumpsTest"/>
+			<item value="Mirror"/>
+			<item value="MirrorTest"/>
+			<item value="catch"/>
 		</list>
 		<list key="replacehistory">
-			<item value="NumberofClumps"/>
+			<item value="newarr"/>
+			<item value="splitArray"/>
+			<item value="splitArrayTest"/>
+			<item value="numberOfClumps"/>
+			<item value="numberOfClumpsTest"/>
+			<item value="mirror"/>
+			<item value="mirrorTest"/>
+			<item value="fixXY"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

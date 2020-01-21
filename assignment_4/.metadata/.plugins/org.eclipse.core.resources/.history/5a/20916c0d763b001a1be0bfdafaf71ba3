@@ -12,38 +12,38 @@ public class ArrOperation
 	 * @param size
 	 * @return size of maximum mirror section
 	 */
-	public int mirror(int []arr,int size) throws AssertionError
+	public int Mirror(int []arr,int size) throws AssertionError
 	{
-		
+		try
+		{
 		int max=0;
 		
 		if(arr.length==0)
 		{
 			
-				throw new AssertionError("Assertion Error occured"); 
+				throw new AssertionError(); 
 			
 		}
 		int [][]matrix=new int[size+1][size+1];
-		
-		for(int i=0; i<=size; i++)
+		for(int i=0;i<=size;i++)
 		{
-			for(int j=0; j<=size; j++)
+			for(int j=0;j<=size;j++)
 			{
-				if(i==0 || j==0)
+				if(i==0||j==0)
 				{
-					matrix[i][j] = 0;
+					matrix[i][j]=0;
 				}
-				else if(arr[i-1] == arr[size-j])
+				else if(arr[i-1]==arr[size-j])
 				{
-					matrix[i][j] = matrix[i-1][j-1]+1;
+					matrix[i][j]=matrix[i-1][j-1]+1;
 				}
 				else
 				{
-					matrix[i][j] = 0;
+					matrix[i][j]=0;
 				}
-				if(max< matrix[i][j])
+				if(max<matrix[i][j])
 				{
-					max= matrix[i][j];
+					max=matrix[i][j];
 				}
 				
 			}
@@ -55,7 +55,12 @@ public class ArrOperation
 		return max;
 		}
 		
-		
+		catch(AssertionError e)
+		{
+			System.out.println("Assertion Error occured");
+			return -1;
+		}
+	}
 	
 	/**
 	 * 
@@ -63,41 +68,46 @@ public class ArrOperation
 	 * @param size
 	 * @return
 	 */
-	public int splitArray(int []arr,int size) throws AssertionError
+	public int SplitArray(int []arr,int size) throws AssertionError
 	{
-		
+		try
+		{
 		int index=-1;
-		
-		if(arr.length == 0)
+		if(arr.length==0)
 		{
 			throw new AssertionError();
 		}
 		
-		int leftarr = arr[0], rightarr=0;
+		int leftarr=arr[0],rightarr=0;
 		
 		
-		for(int i=0; i<size-1; i++)
+		for(int i=0;i<size-1;i++)
 		{
-			rightarr =0;
-			for(int j=i+1; j<size; j++)
+			rightarr=0;
+			for(int j=i+1;j<size;j++)
 			{
-				rightarr= rightarr + arr[j];
+				rightarr=rightarr+arr[j];
 			}
-			if(leftarr == rightarr)
+			if(leftarr==rightarr)
 			{
-				index= i+1;
+				index=i+1;
 				return index;
 			}
 			else
 			{
-				leftarr= leftarr + arr[i+1];
+				leftarr=leftarr+arr[i+1];
 			}
 		}
 		
 		return index;
 		}
 		
-		
+		catch(AssertionError e)
+		{
+			System.out.println("Assertion Error occured");
+			return -2;
+		}
+	}
 	
 	/**
 	 * 
@@ -105,26 +115,28 @@ public class ArrOperation
 	 * @param size
 	 * @return number of clumps in the array
 	 */
-	public int numberOfClumps(int []arr,int size) throws AssertionError
+	public int NumberofClumps(int []arr,int size) throws AssertionError
 	{
-		if(size == 0)
-			throw new AssertionError("Assertion Error occured");
-		
-		int count=0;
-		int element =-1;
-		
-		for(int i=0; i<size-1; i++)
+		try
 		{
-			if(arr[i] == arr[i+1] && element != arr[i])
+		if(size==0)
+		{
+			throw new AssertionError();
+		}
+		int count=0;
+		int element=-1;
+		for(int i=0;i<size-1;i++)
+		{
+			if(arr[i]==arr[i+1] && element!=arr[i])
 			{
 				count++;
-				element = arr[i];
+				element=arr[i];
 			}
 			else
 			{
-				if(arr[i]!= element)
+				if(arr[i]!=element)
 				{
-					element = -1;
+					element=-1;
 				}
 			}
 			
@@ -132,8 +144,13 @@ public class ArrOperation
 		
 		return count;
 		}
+		catch(AssertionError e)
+		{
+			System.out.println("Assertion Error occured");
+			return -1;
+		}
 		
-	
+	}
 	/**
 	 * 
 	 * @param array
@@ -148,35 +165,32 @@ public class ArrOperation
 		try
 		{
 		
-		int []newarr= arr;
-		
+		int []new_arr=arr;
 		int countx=0,county=0;
-		
 		List <Integer>posx=new ArrayList<Integer>();
 		List <Integer>posy=new ArrayList<Integer>();
-		
-		for(int i=0; i<size; i++)
+		for(int i=0;i<size;i++)
 		{
-				if(newarr[i] == x) 
+				if(new_arr[i]==x) 
 				{
 					posx.add(i);
 					countx++;
 				}
-				if(newarr[i] == y)
+				if(new_arr[i]==y)
 				{
 					posy.add(i);
 					county++;
 				}
-				if(i< size-1)
+				if(i<size-1)
 				{
-				if(newarr[i] == newarr[i+1] && newarr[i]== x)
+				if(new_arr[i]==new_arr[i+1] && new_arr[i]==x)
 				{
 					throw new AssertionError();
 				}
 				}
 				
 		}
-		if(newarr[size-1] == x)
+		if(new_arr[size-1]==x)
 		{
 			throw new AssertionError();
 		}
@@ -184,7 +198,7 @@ public class ArrOperation
 		{
 			throw new AssertionError();
 		}
-		if(newarr.length==0)
+		if(new_arr.length==0)
 		{
 			throw new AssertionError();
 		}
@@ -192,12 +206,12 @@ public class ArrOperation
 		
 		for(int i=0;i<countx;i++)
 		{
-			int temp= newarr[posx.get(i)+1];
-			newarr[posx.get(i)+1] = newarr[posy.get(i)];
-			newarr[posy.get(i)] = temp;
+			int temp=new_arr[posx.get(i)+1];
+			new_arr[posx.get(i)+1]=new_arr[posy.get(i)];
+			new_arr[posy.get(i)]=temp;
 		}
 		
-		return newarr;
+		return new_arr;
 		}
 		catch(AssertionError e)
 		{
@@ -211,31 +225,30 @@ public class ArrOperation
 
 		int[] arr= new int[10];
 		Scanner sc= new Scanner(System.in);
-		System.out.println("Enter the number of elements");
+		System.out.println("enter the number of elements");
 		int size=sc.nextInt();
-		System.out.println("Enter the elements");
-		
-		for(int i=0; i<size; i++)
+		System.out.println("enter the elements");
+		for(int i=0;i<size;i++)
 		{
 			arr[i]=sc.nextInt();
 		}
 		ArrOperation arroperation=new ArrOperation();
 		
-		int max=arroperation.mirror(arr, size);
-		System.out.println("Size of max mirror section= "+max);
+		int max=arroperation.Mirror(arr, size);
+		System.out.println(max);
 		
-		int clumps=arroperation.numberOfClumps(arr,size);
-		System.out.println("Number of clumps= "+clumps);
+		int clumps=arroperation.NumberofClumps(arr,size);
+		System.out.println(clumps);
 		
 		System.out.println("Enter X and Y");
 		int x=sc.nextInt();
 		int y=sc.nextInt();
 		
-		int newarr[];
-		newarr=arroperation.fixXY(arr, x, y,size);
-		for(int i=0; i<size; i++)
+		int new_arr[];
+		new_arr=arroperation.FixXY(arr, x, y,size);
+		for(int i=0;i<size;i++)
 		{
-			System.out.println(newarr[i]);
+			System.out.println(new_arr[i]);
 		}
 		
 		int splitindex=arroperation.splitArray(arr, size);
