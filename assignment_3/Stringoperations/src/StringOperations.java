@@ -10,7 +10,7 @@ public class StringOperations
 	 * @return 1 if both strings are equals and 0 if unequal
 	 */
 	
-	public int Comparison(String s1,String s2)
+	public int comparision(String s1,String s2)
 	{
 		char c1[]= new char[s1.length()];
 		char c2[]= new char[s2.length()];
@@ -29,10 +29,10 @@ public class StringOperations
 						return 0;
 					}
 				}
-			if(flag==0)
-			{
-				return 1;
-			}
+				if(flag==0)
+				{
+					return 1;
+				}
 			}
 			else
 			{
@@ -48,7 +48,7 @@ public class StringOperations
 	 * @return reversed string
 	 */
 	
-	public String string_reversal(String s1)
+	public String stringReversal(String s1)
 	{
 		char c1[]= new char[s1.length()];
 		char c2[]= new char[s1.length()];
@@ -72,7 +72,7 @@ public class StringOperations
 	 * @return string with uppercase converted to lower and lowercase to upper
 	 */
 	
-	public String change_case(String str)
+	public String changeCase(String str)
 	{
 		char s[]= new char[str.length()];
 		s=str.toCharArray();
@@ -95,10 +95,12 @@ public class StringOperations
 				s[i]=c;
 			}
 		}
-		String Case_converted=new String(s);
 		
 		
-		return Case_converted;
+		String caseconvertedstring=new String(s);
+		
+		
+		return caseconvertedstring;
 	}
 	
 	/**
@@ -106,7 +108,7 @@ public class StringOperations
 	 * @param sentence
 	 * @return largest word in the sentence
 	 */
-	public String Find_longest_word(String sentence)
+	public String findLongestWord(String sentence)
 	{
 		String Schar[]= new String[100];
 		
@@ -147,7 +149,7 @@ public class StringOperations
 		StringOperations stringoperations= new StringOperations();
 		
 		//calls the comparison method
-		int result=stringoperations.Comparison(s1, s2);
+		int result=stringoperations.comparision(s1, s2);
 		if(result==1)
 		{
 			System.out.println("Strings are equal");
@@ -157,16 +159,16 @@ public class StringOperations
 			System.out.println("String are not equal");
 		}
 		
-		//calls the string_reversal method
-		String Srev=stringoperations.string_reversal(s1);
+		//calls the stringReversal method
+		String Srev= stringoperations.stringReversal(s1);
 		System.out.println("first string when reversed becomes "+Srev);
 		
-		//calls the change_case method
+		//calls the changeCase method
 		System.out.println("enter the string to change cases");
 		String str;
 		try
 		{
-		 str= sc.nextLine();
+			str= sc.nextLine();
 		}
 		catch(Exception e)
 		{
@@ -176,8 +178,8 @@ public class StringOperations
 		}
 		
 		//calls the case conversion method
-		String Case_converted=stringoperations.change_case(str);
-		System.out.println(Case_converted);
+		String caseconvertedstring=stringoperations.changeCase(str);
+		System.out.println(caseconvertedstring);
 		
 		System.out.println("Enter a sentence");
 		String sentence;
@@ -193,8 +195,8 @@ public class StringOperations
 		}
 		
 		// calls the find longest word method
-		String Long_word=stringoperations.Find_longest_word(sentence);
-		System.out.println(Long_word);
+		String longestword=stringoperations.findLongestWord(sentence);
+		System.out.println(longestword);
 
 	}
 
