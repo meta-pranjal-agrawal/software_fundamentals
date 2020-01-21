@@ -5,79 +5,79 @@ import org.junit.Test;
 public class ArrOperationTest 
 {
 	@Test
-	public void mirrorTest1()
+	public void getSizeOfMirrorSectionTest1()
 	{
 		
 		ArrOperation arroperation= new ArrOperation();
-		int size=arroperation.mirror(new int[]{1,2,3,8,9,3,2,1}, 8);
+		int size=arroperation.getSizeOfMirrorSection(new int[]{1,2,3,8,9,3,2,1}, 8);
 		assertEquals(3,size);
 		
 	}
 	
 	@Test
-	public void mirrorTest2()
+	public void getSizeOfMirrorSectionTest2()
 	{
 		
 		ArrOperation arroperation= new ArrOperation();
-		int size=arroperation.mirror(new int[]{7,1,4,9,7,4,1}, 7);
+		int size=arroperation.getSizeOfMirrorSection(new int[]{7,1,4,9,7,4,1}, 7);
 		assertEquals(2,size);
 		
 	}
 	
 	@Test
-	public void mirrorTest3()
+	public void getSizeOfMirrorSectionTest3()
 	{
 		
 		ArrOperation arroperation= new ArrOperation();
-		int size=arroperation.mirror(new int[]{1,2,1,4},4);
+		int size=arroperation.getSizeOfMirrorSection(new int[]{1,2,1,4},4);
 		assertEquals(3,size);
 	}
 
 	@Test(expected=AssertionError.class)
-	public void mirrorTest4()
+	public void getSizeOfMirrorSectionTest4()
 	{
 		
 		ArrOperation arroperation= new ArrOperation();
-		int size=arroperation.mirror(new int[]{},0);
+		int size=arroperation.getSizeOfMirrorSection(new int[]{},0);
 		assertEquals(-1,size);
 	}
 	
 	
 	@Test
-	public void numberOfClumpsTest1()
+	public void getNumberOfClumpsTest1()
 	{
 		
 		ArrOperation arroperation= new ArrOperation();
-		int clumps=arroperation.numberOfClumps(new int[]{1,2,2,3,4,4},6);
+		int clumps=arroperation.getNumberOfClumps(new int[]{1,2,2,3,4,4},6);
 		assertEquals(2,clumps);			
 	}
 	
 	@Test
-	public void numberOfClumpsTest2()
+	public void getNumberOfClumpsTest2()
 	{
 		
 		ArrOperation arroperation= new ArrOperation();
-		int clumps=arroperation.numberOfClumps(new int[]{1,1,2,1,1},5);
+		int clumps=arroperation.getNumberOfClumps(new int[]{1,1,2,1,1},5);
 		assertEquals(2,clumps);
 		
 	}
 	
 	@Test
-	public void numberOfClumpsTest3()
+	public void getNumberOfClumpsTest3()
 	{
 		
 		ArrOperation arroperation= new ArrOperation();
-		int clumps=arroperation.numberOfClumps(new int[]{1,1,1,1,1},5);
+		int clumps=arroperation.getNumberOfClumps(new int[]{1,1,1,1,1},5);
 		assertEquals(1,clumps);
 		
 	} 
 	
 	@Test(expected=AssertionError.class)
-	public void numberOfClumpsTest4()
+	public void getNumberOfClumpsTest4()
 	{
 		
 		ArrOperation arroperation= new ArrOperation();
-		int clumps=arroperation.numberOfClumps(new int[]{},0);
+		int clumps=arroperation.getNumberOfClumps(new int[]{},0);
 		//assertEquals(-1,clumps);			
 	}
 	
@@ -129,41 +129,41 @@ public class ArrOperationTest
 	
 	
 	@Test
-	public void splitArrayTest1()
+	public void getSplitArrayIndexTest1()
 	{
 		
 		ArrOperation arroperation= new ArrOperation();
-		int index=arroperation.splitArray(new int[]{1,1,1,2,1}, 5);
+		int index=arroperation.getSplitArrayIndex(new int[]{1,1,1,2,1}, 5);
 		assertEquals(3,index);
 		
 	}
 	
 	@Test
-	public void splitArrayTest2()
+	public void getSplitArrayIndexTest2()
 	{
 		
 		ArrOperation arroperation= new ArrOperation();
-		int index=arroperation.splitArray(new int[]{2,1,1,2,1}, 5);
+		int index=arroperation.getSplitArrayIndex(new int[]{2,1,1,2,1}, 5);
 		assertEquals(-1,index);
 		
 	}
 	
 	@Test
-	public void splitArrayTest3()
+	public void getSplitArrayIndexTest3()
 	{
 		
 		ArrOperation arroperation= new ArrOperation();
-		int index=arroperation.splitArray(new int[]{10,10}, 2);
+		int index=arroperation.getSplitArrayIndex(new int[]{10,10}, 2);
 		assertEquals(1,index);
 		
 	}
 	
 	@Test(expected=AssertionError.class)
-	public void splitArrayTest4()
+	public void getSplitArrayIndexTest4()
 	{
 		
 		ArrOperation arroperation= new ArrOperation();
-		int index=arroperation.splitArray(new int[]{}, 0);
+		int index=arroperation.getSplitArrayIndex(new int[]{}, 0);
 		//assertEquals(-2,index);	
 	}
 	
