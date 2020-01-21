@@ -1,0 +1,15 @@
+import static org.junit.Assert.assertEquals; 
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+public class NQueenTest 
+{
+	@Test
+	public void NQueenTest1()
+	{
+		NQueenProblem nqueen = new NQueenProblem();
+		boolean result=nqueen.nQueen(8);
+		assertEquals(true,result);
+	}
+
+}

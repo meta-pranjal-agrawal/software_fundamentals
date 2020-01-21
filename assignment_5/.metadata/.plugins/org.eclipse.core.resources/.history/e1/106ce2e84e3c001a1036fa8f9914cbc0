@@ -1,0 +1,94 @@
+import java.util.Scanner;
+
+
+public class NQueenProblem 
+{
+	
+	 int [][] chessboard= new int[100][100];
+	
+	
+	public boolean nQueen(int [][]board,int startrow,int dimensionofmatrix)
+	{
+		chessboard=board;
+		if(startrow==0)
+		{
+			return true;
+		}
+		
+		for(int i=0; i<dimensionofmatrix; i++)
+		{
+			for(int j=0; j<dimensionofmatrix; j++)
+			{
+				if(!isAttack(chessboard,i,j,dimensionofmatrix) && board[i][j]!=1)
+				{
+					chessboard[i][j]=1;
+					
+					if(nQueen(chessboard,(startrow-1),dimensionofmatrix)== true)
+					{
+						return true;
+					}
+					
+					chessboard[i][j]=0;
+						
+				}
+			}
+		}
+		
+		
+		return false;
+	}
+
+	public boolean isAttack(int [][]board,int row,int col,int dimensionofmatrix)
+	{
+		chessboard=board;
+		for(int k=0; k<dimensionofmatrix; k++)
+		{
+			if(chessboard[row][k]==1 || chessboard[k][col]==1 )
+				return true;
+		}
+		
+		for(int k=0; k<dimensionofmatrix; k++)
+		{
+			for(int l=0; l<dimensionofmatrix; l++)
+			{
+				if((k+l) == (row+col) || (k-l) == (row-col))
+					{
+						if(chessboard[k][l]==1)
+						{
+							return true;
+						}
+					}
+			}
+		}
+		
+		
+		return false;
+	}
+	
+	public void print(int dimensionofmatrix)
+	{
+		for(int i=0; i<dimensionofmatrix; i++)
+		{
+			for(int j=0; j<dimensionofmatrix; j++)
+			{
+				System.out.print(chessboard[i][j]+"  ");
+			}
+			System.out.println();
+		}
+	}
+	
+	public static void main(String[] args) 
+	{
+		System.out.println("Enter the value of N");
+		Scanner sc = new Scanner(System.in);
+		int dimensionofmatrix = sc.nextInt();
+		int[][] matrix=new int[100][100];
+		
+		NQueenProblem nqueen = new NQueenProblem();
+		boolean result = nqueen.nQueen(matrix,dimensionofmatrix,dimensionofmatrix);
+		System.out.println(result);
+		nqueen.print(dimensionofmatrix);
+
+	}
+
+}

@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+
+public class Arithmatic 
+{
+	
+	public int LCM(int n1,int n2)
+	{
+		int lcm=(n1*n2)/HCF(n1,n2);
+		return lcm;
+	}
+	
+	public int HCF(int n1,int n2)
+	{
+		if(n1==0)
+			return n2;
+		return HCF(n2%n1 , n1);
+	}
+
+	public static void main(String[] args) 
+	{
+		Arithmatic lcmhcf=new Arithmatic();
+		System.out.println("Enter 2 numbers to calculate lcm and hcf");
+		Scanner sc= new Scanner(System.in);
+		int n1=sc.nextInt();
+		int n2=sc.nextInt();
+		int lcm=lcmhcf.LCM(n1, n2);
+		System.out.println("LCM="+lcm);
+		int hcf= lcmhcf.HCF(n1, n2);
+		System.out.println("HCF="+hcf);
+
+	}
+
+}

@@ -1,0 +1,15 @@
+import static org.junit.Assert.assertEquals;  
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+public class SearchTest 
+{
+	@Test
+	public void LinearSearch()
+	{
+		Search search= new Search();
+		int actualindex=search.LinearSearch(new int[]{5,1,3,7,2},7,5,0);
+		assertEquals(4,actualindex);
+	}
+
+}

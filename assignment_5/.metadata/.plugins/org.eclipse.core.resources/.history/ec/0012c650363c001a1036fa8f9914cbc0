@@ -1,0 +1,53 @@
+import static org.junit.Assert.assertEquals;  
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+public class ArithmaticTest 
+{
+	@Test
+	public void lcmOperationTest1()
+	{
+		Arithmatic arith= new Arithmatic();
+		int lcm= arith.lcmOperation(4, 5);
+		assertEquals(20,lcm);
+	}
+	
+	@Test
+	public void lcmOperationTest2()
+	{
+		Arithmatic arith= new Arithmatic();
+		int lcm= arith.lcmOperation(6,8);
+		assertEquals(24,lcm);
+	}
+	@Test
+	public void lcmOperationTest3()
+	{
+		Arithmatic arith= new Arithmatic();
+		int lcm= arith.lcmOperation(0, 5);
+		assertEquals(-1,lcm);
+	}
+	
+	@Test
+	public void hcfOperationTest1()
+	{
+		Arithmatic arith= new Arithmatic();
+		int hcf= arith.hcfOperation(7,35);
+		assertEquals(7,hcf);
+	}
+	
+	@Test
+	public void hcfOperationTest2()
+	{
+		Arithmatic arith= new Arithmatic();
+		int hcf= arith.hcfOperation(6,7);
+		assertEquals(1,hcf);
+	}
+	
+	@Test
+	public void hcfOperationTest3()
+	{
+		Arithmatic arith= new Arithmatic();
+		int hcf= arith.hcfOperation(4,0);
+		assertEquals(4,hcf);
+	}
+}

@@ -1,0 +1,99 @@
+import java.util.Scanner;
+
+
+public class NQueenProblem 
+{
+	
+	 int [][] board= new int[100][100];
+	
+	
+	public boolean nQueen(int [][]board,int startrow,int dimensionofmatrix)
+	{
+		if(startrow==0)
+		{
+			return true;
+		}
+		
+		for(int i=0; i<dimensionofmatrix; i++)
+		{
+			for(int j=0; j<dimensionofmatrix; j++)
+			{
+				if(!isAttack(i,j,dimensionofmatrix) && board[i][j]!=1)
+				{
+					board[i][j]=1;
+					
+					if(nQueen(board,(startrow-1),dimensionofmatrix)== true)
+					{
+						return true;
+					}
+					
+					board[i][j]=0;
+						
+				}
+			}
+		}
+		
+		
+		return false;
+	}
+
+	public boolean isAttack(int row,int col,int dimensionofmatrix)
+	{
+		for(int k=0; k<dimensionofmatrix; k++)
+		{
+			if(board[row][k]==1 || board[k][col]==1 )
+				return true;
+		}
+		
+		for(int k=0; k<dimensionofmatrix; k++)
+		{
+			for(int l=0; l<dimensionofmatrix; l++)
+			{
+				if((k+l) == (row+col) || (k-l) == (row-col))
+					{
+						if(board[k][l]==1)
+						{
+							return true;
+						}
+					}
+			}
+		}
+		
+		
+		return false;
+	}
+	
+	public void print(int dimensionofmatrix)
+	{
+		for(int i=0; i<dimensionofmatrix; i++)
+		{
+			for(int j=0; j<dimensionofmatrix; j++)
+			{
+				System.out.print(board[i][j]+"  ");
+			}
+			System.out.println();
+		}
+	}
+	
+	public static void main(String[] args) 
+	{
+		System.out.println("Enter the value of N");
+		Scanner sc = new Scanner(System.in);
+		int dimensionofmatrix = sc.nextInt();
+		int[][] matrix=new int[100][100];
+		for(int i=0; i<dimensionofmatrix; i++)
+		{
+			for(int j=0; j<dimensionofmatrix; j++)
+			{
+				matrix[i][j]=0;
+			}
+			System.out.println();
+		}
+		NQueenProblem nqueen = new NQueenProblem();
+		boolean result = nqueen.nQueen(matrix,0,dimensionofmatrix);
+		System.out.println(result);
+		nqueen.print(dimensionofmatrix);
+
+	}
+
+}
