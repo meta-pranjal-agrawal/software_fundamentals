@@ -1,0 +1,160 @@
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+
+public class Marksheet
+{
+	/**
+	 * 
+	 * @param grades of students
+	 * @return Average of grades
+	 */
+	public float calculateAverage(int grades[])
+	{
+		float average;
+		int sum=0;
+		for(int i=0; i<grades.length; i++)
+		{
+			sum=sum+grades[i];
+		}
+		
+		Average=(float) sum/grades.length;
+		
+		DecimalFormat decimalformat= new DecimalFormat();
+		decimalformat.setMaximumFractionDigits(2);
+		Average=Float.valueOf(decimalformat.format(Average));
+		
+		return Average;
+		
+	}
+	
+	/**
+	 * 
+	 * @param grades of students
+	 * @return maximum of grades
+	 */
+	public int Calculate_Max(int grades[])
+	{
+		int Max=grades[0];
+		for(int i=0;i<grades.length;i++)
+		{
+			if(Max<grades[i])
+			{
+				Max=grades[i];
+			}
+		}
+		
+		return Max;
+	}
+	
+	/**
+	 * 
+	 * @param grades of students
+	 * @return minimum of grades
+	 */
+	public int Calculate_Min(int grades[])
+	{
+		int Min=grades[0];
+		for(int i=0;i<grades.length;i++)
+		{
+			if(Min>grades[i])
+			{
+				Min=grades[i];
+			}
+		}
+		
+		
+		return Min;
+	}
+	
+	/**
+	 * 
+	 * @param grades of students
+	 * @return percentage of students passed
+	 */
+	public float Students_Passed(int grades[])
+	{
+		float Percent_Students_Passed=0;
+		int count=0;
+		for(int i=0;i<grades.length;i++)
+		{
+			if(grades[i]>=40)
+			{
+				count=count+1;
+			}
+			
+		}
+		
+		Percent_Students_Passed=(float) count*100/grades.length;
+		
+		DecimalFormat decimalformat= new DecimalFormat();
+		decimalformat.setMaximumFractionDigits(2);
+		Percent_Students_Passed=Float.valueOf(decimalformat.format(Percent_Students_Passed));
+		
+		
+		return Percent_Students_Passed;
+	}
+
+	public static void main(String[] args)
+	{
+		Marksheet marksheet = new Marksheet();
+		Scanner sc= new Scanner(System.in);
+		System.out.println("enter the no of students");
+		int no_of_students;
+		try
+		{
+			no_of_students=sc.nextInt();
+		}
+		catch(Exception e)
+		{
+			System.out.println("Incorrect input try again");
+			no_of_students=0;
+			System.exit(0);
+		}
+		int grades[]= new int[no_of_students];
+		System.out.println("Enter the grades of each student");
+		for(int i=0;i<no_of_students;i++)
+		{
+			int grade;
+			try
+			{
+			grade=sc.nextInt();
+			}
+			catch(Exception e)
+			{
+				System.out.println("Incorrect input");
+				grade=0;
+				System.exit(0);
+			}
+			if(grade>=0 && grade<=100)
+			{
+				grades[i]=grade;
+			}
+			else
+			{
+				System.out.println("Incorrect input : enter the grade between 0 and 100 \ntry again");
+				i--;
+			}
+		}
+		
+		//calls the Calculate_Average method 
+		float Average= marksheet.Calculate_Average(grades);
+		System.out.print("Average of the students' grades is = "+Average);
+		
+		System.out.println();
+		
+		//calls the calculate_max method
+		int Maximum=marksheet.Calculate_Max(grades);
+		System.out.println("Maximum grade of the students' grades is = "+Maximum);
+		
+		//calls the calculate_min method 
+		int Min= marksheet.Calculate_Min(grades);
+		System.out.println("Minimum grade of the students' grades is = "+Min);
+		
+		//calls the Students_passed method
+		float Percent_Students_Passed=marksheet.Students_Passed(grades);
+		System.out.println("The percentage of students passed= "+Percent_Students_Passed);
+		System.out.println();
+	}
+
+}
