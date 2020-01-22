@@ -7,7 +7,7 @@ public class Arithmatic
 	 * 
 	 * @param n1
 	 * @param n2
-	 * @return getLcm of two numbers
+	 * @return Lcm of two numbers
 	 */
 	
 	 int lcm=1;
@@ -17,9 +17,7 @@ public class Arithmatic
 		{
 		if(lcm%n1 ==0 && lcm%n2 ==0)
 		{
-			int lcm1 = lcm;
-			lcm = 1;
-			return lcm1;
+			return lcm;
 		}		
 		}
 		catch(ArithmeticException e)
@@ -42,7 +40,7 @@ public class Arithmatic
 	 * 
 	 * @param n1
 	 * @param n2
-	 * @return getHcf of two numbers
+	 * @return Hcf of two numbers
 	 */
 	
 	public int getHcf(int n1,int n2)

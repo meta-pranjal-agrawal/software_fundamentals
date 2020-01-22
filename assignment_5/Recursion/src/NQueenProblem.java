@@ -6,7 +6,13 @@ public class NQueenProblem
 	
 	 int [][] chessboard= new int[100][100];
 	
-	
+	/**
+	 * 
+	 * @param board
+	 * @param startRow
+	 * @param dimensionOfMatrix
+	 * @return true if solution possible false otherwise
+	 */
 	public boolean nQueen(int [][]board,int startRow,int dimensionOfMatrix)
 	{
 		chessboard=board;
@@ -37,7 +43,16 @@ public class NQueenProblem
 		
 		return false;
 	}
-
+	
+	
+	/**
+	 * 
+	 * @param board
+	 * @param row
+	 * @param col
+	 * @param dimensionOfMatrix
+	 * @return if passed cell is under attack
+	 */
 	public boolean isAttack(int [][]board,int row,int col,int dimensionOfMatrix)
 	{
 		chessboard=board;
@@ -65,6 +80,10 @@ public class NQueenProblem
 		return false;
 	}
 	
+	/**
+	 * 
+	 * @param dimensionOfMatrix
+	 */
 	public void print(int dimensionOfMatrix)
 	{
 		for(int i=0; i<dimensionOfMatrix; i++)
