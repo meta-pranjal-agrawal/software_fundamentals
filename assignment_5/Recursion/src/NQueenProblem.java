@@ -68,7 +68,7 @@ public class NQueenProblem
 			{
 				if((k+l) == (row+col) || (k-l) == (row-col))
 					{
-						if(chessboard[k][l]==1)
+						if(chessboard[k][l] == 1)
 						{
 							return true;
 						}
@@ -101,7 +101,7 @@ public class NQueenProblem
 		System.out.println("Enter the value of N");
 		Scanner sc = new Scanner(System.in);
 		int dimensionOfMatrix = sc.nextInt();
-		int[][] matrix=new int[100][100];
+		int[][] matrix = new int[100][100];
 		
 		NQueenProblem nqueen = new NQueenProblem();
 		boolean result = nqueen.nQueen(matrix,dimensionOfMatrix,dimensionOfMatrix);

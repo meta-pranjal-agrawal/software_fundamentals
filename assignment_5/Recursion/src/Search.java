@@ -14,6 +14,10 @@ public class Search
 	 */
 	public int linearSearch(int []arr,int val,int size,int index)
 	{
+		if(arr.length==0)
+		{
+			return -1;
+		}
 		if(index>size-1)
 		{
 			return -1;
@@ -41,6 +45,8 @@ public class Search
 	
 	public int binarySearch(int []arr,int l,int r,int val)
 	{
+		if(arr.length==0)
+			return -1;
 		if(r>= l)
 		{
 			int mid = (l+r)/2;

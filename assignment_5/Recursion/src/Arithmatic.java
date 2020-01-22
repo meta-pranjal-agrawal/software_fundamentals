@@ -27,7 +27,7 @@ public class Arithmatic
 		}
 		catch(Exception e)
 		{
-			System.out.print("Unknown error occured");
+			System.out.print(e.getMessage());
 			return -1;
 		}
 		
