@@ -1,0 +1,140 @@
+public final class IntSet {
+	// final int []universalSet= new int[1000];
+	// final int size=0;
+	final int[] set;
+
+	public IntSet(int[] set)
+	{
+		this.set = set;
+	}
+	
+	/**
+	 * 
+	 * @param x
+	 * @return true when x exists in the set false otherwise
+	 */
+	public boolean isMember(int x) 
+	{	
+		if(set.length<=0)
+			return false;
+		for (int i = 0; i < set.length; i++) 
+		{
+			if (x == set[i]) 
+			{
+				// System.out.println("it exists");
+				return true;
+			}
+
+		}
+
+		return false;
+	}
+	
+	/**
+	 * 
+	 * @return size of set
+	 */
+	public int size() 
+	{
+		return set.length;
+	}
+	
+	
+	/**
+	 * 
+	 * @param subSet
+	 * @return true if if parameter is a subset of the set
+	 */
+	public boolean isSubSet(IntSet subSet)
+	{
+		if(set.length<=0)
+			return false;
+		if (subSet.set.length >= set.length)
+		{
+			for (int i = 0; i < 1000; i++) 
+			{
+				if (isMember(subSet.set[i]) == false) 
+				{
+					return false;
+				}
+			}
+			return true;
+
+		}
+
+		return false;
+	}
+	
+	/**
+	 * 
+	 * @return the complement of the set with respect to universal set  
+	 */
+	public IntSet getComplement() 
+	{
+		if(set.length<=0)
+			return null;
+		int[] complement = new int[1000 - set.length];
+		int j = 0;
+		for (int i = 1; i <= 1000; i++) 
+		{
+			if (!isMember(i)) 
+			{
+				complement[j] = i;
+				j++;
+			}
+		}
+		
+		IntSet intSet1= new IntSet(complement);
+		return intSet1;
+	}
+
+	public IntSet union(IntSet set1, IntSet set2)
+	{
+		if(set.length<=0)
+		{
+			return 
+		}
+		int count = 0;
+		for (int i = 0; i < set1.set.length; i++) 
+		{
+			for (int j = 0; j < set2.set.length; j++) 
+			{
+				if (set1.set[i] == set2.set[j])
+					count++;
+			}
+		}
+		
+		int unionsize = set1.set.length + set2.set.length - count;
+		int union[] = new int[unionsize];
+		int k = 0;
+		for(int i=0;i<set1.set.length;i++)
+		{
+			union[k]=set1.set[i];
+			k++;
+		}
+		
+		for(int j=0;j<set2.set.length;j++)
+		{
+			if(!(set1.isMember(set2.set[j])))
+			{
+				union[k] = set2.set[j];
+				k++;
+			}
+		}
+		
+		IntSet intSet2= new IntSet(union);
+		return intSet2;
+	}
+
+	public static void main(String[] args) 
+	{
+		
+		IntSet intset = new IntSet(new int[] { 1, 2, 3, 4 });
+
+		// System.out.println(intset.isMember(6));
+		IntSet intSet1=intset.getComplement();
+		intset.union(new IntSet(new int[] { 2, 3, 4 }),new IntSet(new int[] { 3, 4, 5, 6 }));
+
+	}
+
+}

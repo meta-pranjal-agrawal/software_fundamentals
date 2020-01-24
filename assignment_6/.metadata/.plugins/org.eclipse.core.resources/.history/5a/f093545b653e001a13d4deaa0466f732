@@ -1,0 +1,28 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+import org.junit.Before;
+
+public class PolyTest 
+{
+
+	
+	@Test
+	public void addPolyTest()
+	{
+		int coeff1[]=new int[]{2,3,1};
+		int pow1[]=new int[]{2,1,0};
+		Poly poly1= new Poly(coeff1.length,coeff1,pow1);
+		poly1=Poly.simplify(poly1);
+		
+		int coeff2[]=new int[]{3,2};
+		int pow2[]=new int[]{1,0};
+		Poly poly2=new Poly(coeff2.length,coeff2,pow2);
+		poly2=Poly.simplify(poly2);
+		Poly result=Poly.addPoly(poly1,poly2);
+		assertArrayEquals(new int[]{2,6,3},result.getCoefficients());
+		assertArrayEquals(new int[]{2,1,0},result.getPower());
+		
+	}
+
+}

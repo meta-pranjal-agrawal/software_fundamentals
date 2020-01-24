@@ -1,0 +1,104 @@
+import static org.junit.Assert.assertEquals;  
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+public class IntSetTest 
+{
+	@Test
+	public void isMemberTest1()
+	{
+		IntSet intSet= new IntSet(new int[]{1,2,3,4});
+		boolean result= intSet.isMember(2);
+		assertEquals(true,result);	
+	}
+	
+	@Test
+	public void isMemberTest2()
+	{
+		IntSet intSet= new IntSet(new int[]{});
+		boolean result= intSet.isMember(2);
+		assertEquals(false,result);	
+	}
+	
+	@Test
+	public void isMemberTest3()
+	{
+		IntSet intSet= new IntSet(new int[]{0});
+		boolean result= intSet.isMember(0);
+		assertEquals(true,result);	
+	}
+	
+	
+	@Test
+	public void sizeTest1()
+	{
+		IntSet intSet= new IntSet(new int[]{1,2,3,4,5});
+		int size= intSet.size();
+		assertEquals(5,size);
+	}
+	
+	@Test
+	public void sizeTest2()
+	{
+		IntSet intSet= new IntSet(new int[]{});
+		int size= intSet.size();
+		assertEquals(0,size);
+	}
+	
+	
+	@Test
+	public void isSubSetTest1()
+	{
+		IntSet intSet= new IntSet(new int[]{1,2,3,4});
+		IntSet subSet= new IntSet(new int[]{2,3});
+		boolean result= intSet.isSubSet(subSet);
+		assertEquals(true,result);	
+	}
+	
+	@Test
+	public void isSubSetTest2()
+	{
+		IntSet intSet= new IntSet(new int[]{1,2,3,4});
+		IntSet subSet= new IntSet(new int[]{});
+		boolean result= intSet.isSubSet(subSet);
+		assertEquals(true,result);	
+	}
+	
+	@Test
+	public void isSubSetTest3()
+	{
+		IntSet intSet= new IntSet(new int[]{1,2,3,4});
+		IntSet subSet= new IntSet(new int[]{0});
+		boolean result= intSet.isSubSet(subSet);
+		assertEquals(false,result);	
+	}
+	
+	@Test
+	public void getComplementTest1()
+	{
+		IntSet intSet= new IntSet(new int[]{1,2,3,4});
+		int j=0;
+		int complement[]= new int[996];
+		
+		for(int i=5;i<=1000;i++)
+		{
+			complement[j]=i;
+			j++;
+		}
+		
+		IntSet complement1= new IntSet(complement);
+		IntSet result= intSet.getComplement();
+		assertArrayEquals(complement1.set,result.set);	 
+	}
+	
+	@Test
+	public void unionTest1()
+	{
+		
+	}
+	
+	
+	
+	
+
+}

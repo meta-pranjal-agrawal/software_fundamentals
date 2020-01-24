@@ -1,0 +1,13 @@
+
+public final class Term 
+{
+	final int coefficients;
+	final int power;
+	public Term(int coefficients,int power)
+	{
+		this.coefficients=coefficients;
+		this.power=power;
+	}
+	
+
+}
