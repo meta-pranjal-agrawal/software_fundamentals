@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="PolyTest" project="AbstractAndConcreteDataTypes" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="PolyTest" time="0.0">
+    <testcase name="multiplyPolyTest1" classname="PolyTest" time="0.0"/>
+    <testcase name="addPolyTest1" classname="PolyTest" time="0.0"/>
+  </testsuite>
+</testrun>

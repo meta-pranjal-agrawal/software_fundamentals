@@ -2,12 +2,14 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="isRegEx"/>
-		<item value="multiplyPoly" key="selection"/>
+		<item value="simplify(" key="selection"/>
 		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="true" key="wholeword"/>
 		<list key="findhistory">
+			<item value="simplify\("/>
+			<item value="multiplyPoly\("/>
 			<item value="multiply"/>
 			<item value="add"/>
 			<item value="compliment"/>
