@@ -99,6 +99,13 @@ public final class IntSet
 		IntSet intSet1 = new IntSet(complement);
 		return intSet1;
 	}
+	
+	/**
+	 * 
+	 * @param set1
+	 * @param set2
+	 * @return union of 2 sets
+	 */
 
 	public IntSet union(IntSet set1, IntSet set2)
 	{
