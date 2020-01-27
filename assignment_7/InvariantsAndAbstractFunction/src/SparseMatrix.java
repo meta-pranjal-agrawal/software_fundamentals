@@ -24,8 +24,8 @@ final public class SparseMatrix
 		}
 		
 		
-		this.rowarr    = new int[countNonZeroElements];
-		this.colarr    = new int[countNonZeroElements];
+		this.rowarr = new int[countNonZeroElements];
+		this.colarr = new int[countNonZeroElements];
 		this.valuesarr = new int [countNonZeroElements];
 		
 		for(int i=0; i<size; i++)
@@ -213,10 +213,9 @@ final public class SparseMatrix
 	public static void main(String[] args)
 	{
 		
-		int [][]matrix1= {{0,2,0,0},
-						  {1,0,0,0},
-						  {3,0,0,0},
-						  {0,0,0,1}};
+		int [][]matrix1= {{1,2,0},
+						  {0,7,0},
+						  {4,0,0}};
 		
 		SparseMatrix sparseMatrix1= new SparseMatrix(matrix1);
 		
