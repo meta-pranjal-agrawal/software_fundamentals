@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="true" key="isRegEx"/>
+		<item value="longestword" key="selection"/>
+		<item value="true" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="Long_word"/>
+			<item value="Find_longest_word"/>
+			<item value="Case_converted"/>
+			<item value="change_case"/>
+			<item value="string_reversal"/>
+			<item value="Comparison"/>
+			<item value="Max"/>
+			<item value="Average"/>
+		</list>
+		<list key="replacehistory">
+			<item value="longestword"/>
+			<item value="findLongestWord"/>
+			<item value="caseconvertedstring"/>
+			<item value="changeCase"/>
+			<item value="stringReversal"/>
+			<item value="comparision"/>
+			<item value="max"/>
+			<item value="average"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="257" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="381" key="DIALOG_HEIGHT"/>
+		<item value="688" key="DIALOG_X_ORIGIN"/>
+		<item value="287" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

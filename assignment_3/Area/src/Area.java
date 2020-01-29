@@ -10,11 +10,12 @@ public class Area
 	 * @return Area of triangle
 	 */
 	
-	public double Area_of_Triangle(double triangle_base,double triangle_height)
+
+	public double areaOfTriangle(double trianglebase,double triangleheight)
 	{
-		double Area_Triangle;
-		Area_Triangle= 0.5*triangle_base*triangle_height;
-		return Area_Triangle;
+		double areaoftriangle;
+		areaoftriangle= 0.5*trianglebase*triangleheight;
+		return areaoftriangle;
 	}
 	
 	
@@ -25,10 +26,10 @@ public class Area
 	 * @return Area of rectangle
 	 */
 
-	public double Area_of_Rectangle(double width_rectangle, double height_rectangle)
+	public double areaOfRectangle(double widthrectangle, double heightrectangle)
 	{
-		double Area_Rectangle=width_rectangle*height_rectangle;
-		return Area_Rectangle;
+		double areaRectangle=widthrectangle*heightrectangle;
+		return areaRectangle;
 	}
 	
 	/**
@@ -36,11 +37,11 @@ public class Area
 	 * @param side of square
 	 * @return area of square
 	 */
-	
-	public double Area_of_Square(double side_square)
+
+	public double areaOfSquare(double sideofsquare)
 	{
-		double Area_square=side_square*side_square;
-		return Area_square;
+		double areasquare=sideofsquare*sideofsquare;
+		return areasquare;
 	}
 	
 	/**
@@ -48,11 +49,11 @@ public class Area
 	 * @param radius of circle
 	 * @return Area of circle
 	 */
-	public double Area_of_Circle(double radius_circle)
+	public double areaOfCircle(double radiusofcircle)
 	{
 		
-		double Area_circle=(22/7)*radius_circle*radius_circle;
-		return Area_circle;
+		double areacircle = (22.0/7)*radiusofcircle*radiusofcircle;
+		return areacircle;
 	}
 
 	public static void main(String[] args) 
@@ -61,100 +62,104 @@ public class Area
 		Scanner sc= new Scanner(System.in);
 		System.out.println("Calculating area of triangle..");
 		System.out.println("enter the base of triangle");
-		double base_triangle;
+		
+		double baseoftriangle;
 		try
 		{
-			base_triangle=sc.nextFloat();
+			baseoftriangle=sc.nextFloat();
 		}
 		catch(Exception e)
 		{
 			System.out.println("please enter correct input");
-			base_triangle=0;
+			baseoftriangle=0;
 			System.exit(0);
 		}
 		System.out.println("enter the height of triangle");
-		double height_triangle;
+		double heightoftriangle;
 		try
 		{
-			height_triangle=sc.nextFloat();
+			heightoftriangle=sc.nextFloat();
 		}
 		catch(Exception e)
 		{
 			System.out.println("please enter correct input");
-			height_triangle=0;
+			heightoftriangle=0;
 			System.exit(0);
 		}
 		
 		
 		// calls the area of triangle method
-		double area_triangle= area.Area_of_Triangle(base_triangle,height_triangle);
-		System.out.println("The area of triangle="+area_triangle);
+		double areaoftriangle= area.areaOfTriangle(baseoftriangle,heightoftriangle);
+		System.out.println("The area of triangle="+areaoftriangle);
 		
 		
 		System.out.println("Calculating area of Rectangle..");
 		System.out.println("enter the width of rectangle");
-		double width_rectangle;
+		double widthrectangle;
 		try
 		{
-			width_rectangle=sc.nextFloat();
+			widthrectangle=sc.nextFloat();
 		}
 		catch(Exception e)
 		{
 			System.out.println("please enter correct input");
-			width_rectangle=0;
+			widthrectangle=0;
 			System.exit(0);
 		}
 		
 		System.out.println("enter the height of triangle");
-		double height_rectangle;
+		double heightrectangle;
 		try
 		{
-			height_rectangle=sc.nextFloat();
+			heightrectangle=sc.nextFloat();
 		}
 		catch(Exception e)
 		{
 			System.out.println("please enter correct input");
-			height_rectangle=0;
+			heightrectangle=0;
 			System.exit(0);
 		}
+		
 		//calls the area of rectangle method
-		double area_rectangle=area.Area_of_Rectangle(width_rectangle,height_rectangle);
-		System.out.println("The area of rectangle="+area_rectangle);
+		double areaRectangle=area.areaOfTriangle(widthrectangle,heightrectangle);
+		System.out.println("The area of rectangle="+areaRectangle);
 		
 		System.out.println("Calculating area of Sqaure..");
 		System.out.println("enter the side of square");
-		double side_square;
+		double sideofsquare;
 		try
 		{
-			side_square=sc.nextFloat();
+			sideofsquare=sc.nextFloat();
 		}
 		catch(Exception e)
 		{
 			System.out.println("please enter correct input");
-			side_square=0;
+			sideofsquare=0;
 			System.exit(0);
 		}
+		
 		// calls the area of square method
-		double area_square=area.Area_of_Square(side_square);
-		System.out.println("The area of sqaure="+area_square);
+		double areasquare=area.areaOfSquare(sideofsquare);
+		System.out.println("The area of sqaure="+areasquare);
 		
 		System.out.println("Calculating area of Circle..");
 		System.out.println("enter the radius of circle");
-		double radius_circle;
+		double radiusofcircle;
 		try
 		{
-			radius_circle=sc.nextFloat();
+			radiusofcircle=sc.nextFloat();
 		}
 		catch(Exception e)
 		{
 			System.out.println("please enter correct input");
-			radius_circle=0;
+			radiusofcircle=0;
 			System.exit(0);
 		}
-		//calls the area of circle method
-		double area_circle=area.Area_of_Circle(radius_circle);
-		System.out.println("The area of circle="+area_circle);
 		
+		
+		//calls the area of circle method
+		double areacircle=area.areaOfCircle(radiusofcircle);
+		System.out.println("The area of circle="+areacircle);		
 	}
 
 }

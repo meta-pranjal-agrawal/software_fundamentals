@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 
@@ -6,20 +7,32 @@ public class Marksheet
 	/**
 	 * 
 	 * @param grades of students
-	 * @return Average of grades
+	 * @return average of grades
 	 */
-	public float Calculate_Average(int grades[])
+	public float calculateaverage(int grades[])
 	{
-		float Average=0;
+		float average;
 		int sum=0;
-		for(int i=0;i<grades.length;i++)
+		for(int i=0; i<grades.length; i++)
 		{
 			sum=sum+grades[i];
 		}
 		
-		Average=(float) (sum/grades.length);
+		try
+		{
+			average=(float) sum/grades.length;
+			DecimalFormat decimalformat= new DecimalFormat();
+			decimalformat.setMaximumFractionDigits(2);
+			average=Float.valueOf(decimalformat.format(average));
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error occured");
+			average=0;
+			System.exit(0);
+		}
 		
-		return Average;
+		return average;
 		
 	}
 	
@@ -28,18 +41,18 @@ public class Marksheet
 	 * @param grades of students
 	 * @return maximum of grades
 	 */
-	public int Calculate_Max(int grades[])
+	public int calculateMax(int grades[])
 	{
-		int Max=grades[0];
+		int max=grades[0];
 		for(int i=0;i<grades.length;i++)
 		{
-			if(Max<grades[i])
+			if(max<grades[i])
 			{
-				Max=grades[i];
+				max=grades[i];
 			}
 		}
 		
-		return Max;
+		return max;
 	}
 	
 	/**
@@ -47,7 +60,7 @@ public class Marksheet
 	 * @param grades of students
 	 * @return minimum of grades
 	 */
-	public int Calculate_Min(int grades[])
+	public int calculateMin(int grades[])
 	{
 		int Min=grades[0];
 		for(int i=0;i<grades.length;i++)
@@ -67,9 +80,9 @@ public class Marksheet
 	 * @param grades of students
 	 * @return percentage of students passed
 	 */
-	public float Students_Passed(int grades[])
+	public float studentsPassed(int grades[])
 	{
-		float Percent_Students_Passed=0;
+		float percentstudentspassed=0;
 		int count=0;
 		for(int i=0;i<grades.length;i++)
 		{
@@ -80,9 +93,14 @@ public class Marksheet
 			
 		}
 		
-		Percent_Students_Passed=(float) (count*100/grades.length);
-	
-		return Percent_Students_Passed;
+		percentstudentspassed=(float) count*100/grades.length;
+		
+		DecimalFormat decimalformat= new DecimalFormat();
+		decimalformat.setMaximumFractionDigits(2);
+		percentstudentspassed=Float.valueOf(decimalformat.format(percentstudentspassed));
+		
+		
+		return percentstudentspassed;
 	}
 
 	public static void main(String[] args)
@@ -127,22 +145,24 @@ public class Marksheet
 			}
 		}
 		
-		//calls the Calculate_Average method 
-		float Average= marksheet.Calculate_Average(grades);
-		System.out.println("Average of the students' grades is = "+Average);
+		//calls the Calculate_average method 
+		float average= marksheet.calculateaverage(grades);
+		System.out.print("average of the students' grades is = "+average);
 		
-		//calls the calculate_max method
-		int Maximum=marksheet.Calculate_Max(grades);
-		System.out.println("Maximum grade of the students' grades is = "+Maximum);
+		System.out.println();
 		
-		//calls the calculate_min method 
-		int Min= marksheet.Calculate_Min(grades);
+		//calls the calculateMax method
+		int maximum=marksheet.calculateMax(grades);
+		System.out.println("Maximum grade of the students' grades is = "+maximum);
+		
+		//calls the calculateMin method 
+		int Min= marksheet.calculateMin(grades);
 		System.out.println("Minimum grade of the students' grades is = "+Min);
 		
-		//calls the Students_passed method
-		float Percent_Students_Passed=marksheet.Students_Passed(grades);
-		System.out.println("The percentage of students passed= "+Percent_Students_Passed);
-		
+		//calls the studentsPassed method
+		float percentstudentspassed=marksheet.studentsPassed(grades);
+		System.out.println("The percentage of students passed= "+percentstudentspassed);
+		System.out.println();
 	}
 
 }

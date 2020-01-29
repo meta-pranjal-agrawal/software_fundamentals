@@ -1,0 +1,142 @@
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Scanner;
+
+
+public class ArrOperation
+{
+	public int Mirror(int []arr,int size)
+	{
+		int max=0;
+		
+		int [][]matrix=new int[size+1][size+1];
+		for(int i=0;i<=size;i++)
+		{
+			for(int j=0;j<=size;j++)
+			{
+				if(i==0||j==0)
+				{
+					matrix[i][j]=0;
+				}
+				else if(arr[i-1]==arr[size-j])
+				{
+					matrix[i][j]=matrix[i-1][j-1]+1;
+				}
+				else
+				{
+					matrix[i][j]=0;
+				}
+				if(max<matrix[i][j])
+				{
+					max=matrix[i][j];
+				}
+				
+			}
+			
+		}
+		for(int i=0;i<=size;i++)
+		{
+			for(int j=0;j<=size;j++)
+			{
+				System.out.print(matrix[i][j]);
+			}
+			System.out.println();
+		}
+		return max;
+	}
+	
+	public int splitArray(int []arr,int size)
+	{
+		int leftarr=arr[0],rightarr=0;
+		int index=-1;
+		for(int i=0;i<size;i++)
+		{
+			rightarr=0;
+			for(int j=i+1;j<size;j++)
+			{
+				rightarr=rightarr+arr[j];
+			}
+		}
+		return -1;
+		
+	}
+	public int No_of_Clumps(int []arr,int size)
+	{
+		int count=0;
+		int element=-1;
+		for(int i=0;i<size-1;i++)
+		{
+			if(arr[i]==arr[i+1] && element!=arr[i])
+			{
+				count++;
+				element=arr[i];
+			}
+			else
+			{
+				if(arr[i]!=element)
+				{
+					element=-1;
+				}
+			}
+			
+		}
+		
+		return count;
+		
+	}
+	
+	/*public int[] FixXY(int []arr,int x,int y)
+	{
+		
+		
+		
+		return 0;
+	}*/
+	
+	public int SplitArray(int []arr,int size)
+	{
+		int arr1[]= new int[size];
+		int arr2[]= new int[size];
+		
+		for(int i=0;i<size;i++)
+		{
+			for(int j=0;j<i;j++)
+			{
+				
+			}
+		}
+		
+		return -1;
+	}
+	public static void main(String[] args)
+	{
+
+		int[] arr= new int[10];
+		Scanner sc= new Scanner(System.in);
+		System.out.println("enter the number of elements");
+		int size=sc.nextInt();
+		System.out.println("enter the elements");
+		for(int i=0;i<size;i++)
+		{
+			arr[i]=sc.nextInt();
+		}
+		ArrOperation arroperation=new ArrOperation();
+		
+		int max=arroperation.Mirror(arr, size);
+		System.out.println(max);
+		
+		int clumps=arroperation.No_of_Clumps(arr,size);
+		System.out.println(clumps);
+		
+		System.out.println("Enter X and Y");
+		int x=sc.nextInt();
+		int y=sc.nextInt();
+		
+		//int new_arr[]= new int[size];
+		//new_arr=arroperation.FixXY(new_arr, x, y);
+		
+		
+		
+	}
+
+}
