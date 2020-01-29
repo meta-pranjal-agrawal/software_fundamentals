@@ -10,6 +10,7 @@ public class Area
 	 * @return Area of triangle
 	 */
 	
+
 	public double areaOfTriangle(double trianglebase,double triangleheight)
 	{
 		double areaoftriangle;
@@ -36,7 +37,7 @@ public class Area
 	 * @param side of square
 	 * @return area of square
 	 */
-	
+
 	public double areaOfSquare(double sideofsquare)
 	{
 		double areasquare=sideofsquare*sideofsquare;
@@ -158,8 +159,7 @@ public class Area
 		
 		//calls the area of circle method
 		double areacircle=area.areaOfCircle(radiusofcircle);
-		System.out.println("The area of circle="+areacircle);
-		
+		System.out.println("The area of circle="+areacircle);		
 	}
 
 }
