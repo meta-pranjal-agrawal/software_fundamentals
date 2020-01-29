@@ -1,0 +1,55 @@
+import static org.junit.Assert.*;
+
+import org.junit.*;
+
+
+
+public class SparseMatrixTest 
+{
+	
+	SparseMatrix sparseMatrix1;
+	SparseMatrix sparseMatrix2;
+	
+	@Before
+	public void init()
+	{
+		int [][]matrix1= {{0,2,0,0},
+				  		  {1,0,0,0},
+				  		  {3,0,0,0},
+				  		  {0,0,0,1}};
+
+		sparseMatrix1=new SparseMatrix(matrix1);
+
+		int [][]matrix2= {{0,9,0,0},
+		 		  {9,0,0,0},
+		 		  {0,0,0,0},
+		 		  {0,0,0,0}};
+
+		sparseMatrix2=new SparseMatrix(matrix2);
+	}
+	
+	
+	@Test
+	public void getTransposeTest()
+	{
+		
+		int result[][]=sparseMatrix1.getTranspose();
+		int [][]transpose={{0,1,3,0},
+							{2,0,0,0},
+							{0,0,0,0},
+							{0,0,0,1}};
+		
+		assertArrayEquals(transpose,result);
+	}
+	
+	@Test
+	public void addTest()
+	{
+		int [][]result=sparseMatrix1.add(sparseMatrix2);
+		int [][]expected={{0,11,0,0}, 
+						  {10,0,0,0}, 
+						  {3,0,0,0},
+						  {0,0,0,1}};
+	}
+
+}
