@@ -1,6 +1,7 @@
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 
 public class ArrOperation
@@ -11,54 +12,48 @@ public class ArrOperation
 	 * @param size
 	 * @return size of maximum mirror section
 	 */
-	public int Mirror(int []arr,int size) throws AssertionError
+	public int getSizeOfMirrorSection(int []arr,int size) throws AssertionError
 	{
-		try
-		{
-		int max=0;
+		
+		int maxSizeofMirror=0;
 		
 		if(arr.length==0)
 		{
 			
-				throw new AssertionError(); 
+			throw new AssertionError("Array Empty"); 
 			
 		}
 		int [][]matrix=new int[size+1][size+1];
-		for(int i=0;i<=size;i++)
+		
+		for(int i=0; i<=size; i++)
 		{
-			for(int j=0;j<=size;j++)
+			for(int j=0; j<=size; j++)
 			{
-				if(i==0||j==0)
+				if(i==0 || j==0)
 				{
-					matrix[i][j]=0;
+					matrix[i][j] = 0;
 				}
-				else if(arr[i-1]==arr[size-j])
+				else if(arr[i-1] == arr[size-j])
 				{
-					matrix[i][j]=matrix[i-1][j-1]+1;
+					matrix[i][j] = matrix[i-1][j-1]+1;
 				}
 				else
 				{
-					matrix[i][j]=0;
+					matrix[i][j] = 0;
 				}
-				if(max<matrix[i][j])
+				if(maxSizeofMirror< matrix[i][j])
 				{
-					max=matrix[i][j];
+					maxSizeofMirror= matrix[i][j];
 				}
 				
 			}
 			
 		}
 		
-		
-		
-		return max;
+		return maxSizeofMirror;
 		}
 		
-		catch(AssertionError e)
-		{
-			return -1;
-		}
-	}
+		
 	
 	/**
 	 * 
@@ -66,45 +61,41 @@ public class ArrOperation
 	 * @param size
 	 * @return
 	 */
-	public int SplitArray(int []arr,int size) throws AssertionError
+	public int getSplitArrayIndex(int []arr,int size) throws AssertionError
 	{
-		try
-		{
+		
 		int index=-1;
-		if(arr.length==0)
+		
+		if(arr.length == 0)
 		{
-			throw new AssertionError();
+			throw new AssertionError("Array Empty");
 		}
 		
-		int leftarr=arr[0],rightarr=0;
+		int leftArraySum = arr[0], rightArraySum=0;
 		
 		
-		for(int i=0;i<size-1;i++)
+		for(int i=0; i<size-1; i++)
 		{
-			rightarr=0;
-			for(int j=i+1;j<size;j++)
+			rightArraySum = 0;
+			for(int j=i+1; j<size; j++)
 			{
-				rightarr=rightarr+arr[j];
+				rightArraySum= rightArraySum + arr[j];
 			}
-			if(leftarr==rightarr)
+			if(leftArraySum == rightArraySum)
 			{
-				index=i+1;
+				index= i+1;
 				return index;
 			}
 			else
 			{
-				leftarr=leftarr+arr[i+1];
+				leftArraySum= leftArraySum + arr[i+1];
 			}
 		}
 		
 		return index;
 		}
 		
-		catch(AssertionError e)
-		{
-			return -2;
-		}
-	}
+		
 	
 	/**
 	 * 
@@ -112,28 +103,26 @@ public class ArrOperation
 	 * @param size
 	 * @return number of clumps in the array
 	 */
-	public int NumberofClumps(int []arr,int size) throws AssertionError
+	public int getNumberOfClumps(int []arr,int size) throws AssertionError
 	{
-		try
-		{
-		if(arr.length==0)
-		{
-			throw new AssertionError();
-		}
+		if(size == 0)
+			throw new AssertionError("Array Empty");
+		
 		int count=0;
-		int element=-1;
-		for(int i=0;i<size-1;i++)
+		int element =-1;
+		
+		for(int i=0; i< size-1; i++)
 		{
-			if(arr[i]==arr[i+1] && element!=arr[i])
+			if(arr[i] == arr[i+1] && element != arr[i])
 			{
 				count++;
-				element=arr[i];
+				element = arr[i];
 			}
 			else
 			{
-				if(arr[i]!=element)
+				if(arr[i]!= element)
 				{
-					element=-1;
+					element = -1;
 				}
 			}
 			
@@ -141,12 +130,8 @@ public class ArrOperation
 		
 		return count;
 		}
-		catch(AssertionError e)
-		{
-			return -1;
-		}
 		
-	}
+	
 	/**
 	 * 
 	 * @param array
@@ -156,65 +141,146 @@ public class ArrOperation
 	 * @return arranged array
 	 */
 	
-	public int[] FixXY(int []arr,int x,int y,int size) throws AssertionError
+	public int[] fixXY(int []arr,int x,int y,int size) throws AssertionError
 	{
 		try
 		{
 		
-		int []new_arr=arr;
-		int countx=0,county=0;
-		List <Integer>posx=new ArrayList<Integer>();
-		List <Integer>posy=new ArrayList<Integer>();
-		for(int i=0;i<size;i++)
+		int []newArr= arr;
+		
+		int countX=0,countY=0;
+		
+		List <Integer>posX=new ArrayList<Integer>();
+		List <Integer>posY=new ArrayList<Integer>();
+		
+		for(int i=0; i<size; i++)
 		{
-				if(new_arr[i]==x) 
+				if(newArr[i] == x) 
 				{
-					posx.add(i);
-					countx++;
+					posX.add(i);
+					countX++;
 				}
-				if(new_arr[i]==y)
+				if(newArr[i] == y)
 				{
-					posy.add(i);
-					county++;
+					posY.add(i);
+					countY++;
 				}
-				if(i<size-1)
+				if(i< size-1)
 				{
-				if(new_arr[i]==new_arr[i+1] && new_arr[i]==x)
+				if(newArr[i] == newArr[i+1] && newArr[i]== x)
 				{
 					throw new AssertionError();
 				}
 				}
 				
 		}
-		if(new_arr[size-1]==x)
+		if(newArr[size-1] == x)
 		{
 			throw new AssertionError();
 		}
-		if(countx!=county)
+		if(countX!=countY)
 		{
 			throw new AssertionError();
 		}
-		if(new_arr.length==0)
+		if(newArr.length==0)
 		{
 			throw new AssertionError();
 		}
 		
 		
-		for(int i=0;i<countx;i++)
+		for(int i=0; i<countX; i++)
 		{
-			int temp=new_arr[posx.get(i)+1];
-			new_arr[posx.get(i)+1]=new_arr[posy.get(i)];
-			new_arr[posy.get(i)]=temp;
+			int temp= newArr[posX.get(i)+1];
+			newArr[posX.get(i)+1] = newArr[posY.get(i)];
+			newArr[posY.get(i)] = temp;
 		}
 		
-		return new_arr;
+		return newArr;
 		}
 		catch(AssertionError e)
 		{
+			System.out.println("Array Empty");
+			return new int[]{-1};
+		}
+		catch(Exception e)
+		{
+			System.out.println(e.getMessage());
 			return new int[]{-1};
 		}
 	}
 	
-	
+	public static void main(String[] args)
+	{
 
+		int[] arr= new int[10];
+		Scanner scanner= new Scanner(System.in);
+		System.out.println("Enter the number of elements");
+		int size;
+		try
+		{
+			size=scanner.nextInt();
+		}
+		catch(Exception e)
+		{
+			System.out.println("Enter correct input");
+			size=0;
+		}
+		
+		if(size>0)
+		{
+			System.out.println("Enter the elements");
+			
+			
+			for(int i=0; i<size; i++)
+			{
+				try
+				{
+				arr[i]=scanner.nextInt();
+				}
+				catch(Exception e)
+				{
+					System.out.println("Please enter a valid input");
+					scanner.nextLine();
+					arr[i] = scanner.nextInt();
+				}
+					
+			}
+
+			ArrOperation arroperation=new ArrOperation();
+	
+			int maxSizeofMirror=arroperation.getSizeOfMirrorSection(arr, size);
+			System.out.println("Size of max mirror section= "+maxSizeofMirror);
+			
+			int clumps=arroperation.getNumberOfClumps(arr,size);
+			System.out.println("Number of clumps= "+clumps);
+			
+			System.out.println("Enter X and Y");
+		
+			int x=scanner.nextInt();
+			int y=scanner.nextInt();
+			
+			int newArr[];
+			newArr=arroperation.fixXY(arr, x, y,size);
+			for(int i=0; i<size; i++)
+			{
+				System.out.println(newArr[i]);
+			}
+			
+			
+			int splitIndex = arroperation.getSplitArrayIndex(arr, size);
+			if(splitIndex >= 0)
+			{
+				System.out.println("Array can be split at= "+splitIndex);
+			}
+		}
+			
+		else
+		{
+			System.out.println("Please enter size greater than 0");
+		}
+			
+	}
+	
+	
 }
+
