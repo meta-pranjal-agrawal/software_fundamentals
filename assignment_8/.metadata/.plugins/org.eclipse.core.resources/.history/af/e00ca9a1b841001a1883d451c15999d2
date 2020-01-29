@@ -1,0 +1,13 @@
+
+public class Peacock extends Bird
+{
+
+	@Override
+	public String getSound() {
+		
+				
+		return "screams";
+	}
+	
+
+}

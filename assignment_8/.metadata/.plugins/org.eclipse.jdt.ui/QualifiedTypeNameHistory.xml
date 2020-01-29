@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="Mammal"/>
+<fullyQualifiedTypeName name="ZoneMammal1"/>
+<fullyQualifiedTypeName name="Lion"/>
+<fullyQualifiedTypeName name="Animal"/>
+<fullyQualifiedTypeName name="Bird"/>
+<fullyQualifiedTypeName name="Reptile"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="Snake"/>
+<fullyQualifiedTypeName name="org.junit.Before"/>
+<fullyQualifiedTypeName name="ZooTest"/>
+</qualifiedTypeNameHistroy>
