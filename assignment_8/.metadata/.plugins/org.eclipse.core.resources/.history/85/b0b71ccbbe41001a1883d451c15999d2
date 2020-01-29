@@ -1,0 +1,39 @@
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class Zoo 
+{
+	
+	List<Zone> zoo= new ArrayList<Zone>();
+	
+	public void addZone(String category,int limitOfCages,boolean hasPark,boolean hasCanteen)
+	{
+		Zone z1= new Zone(category,limitOfCages,hasPark,hasCanteen);
+		zoo.add(z1);
+		
+	}
+	
+	public boolean addCage(String category,int capacity,String type)
+	{
+		for(int i=0;i<zoo.size();i++)
+		{
+			if(zoo.get(i).category==category && zoo.get(i).limitOfCages>zoo.get(i).numberOfCages)
+			{
+				
+			}
+		}
+		
+		return true;
+	}
+	
+	
+	
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+
+	}
+
+}
