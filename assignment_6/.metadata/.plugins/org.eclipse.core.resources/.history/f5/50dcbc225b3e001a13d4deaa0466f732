@@ -1,0 +1,16 @@
+
+public final class Poly 
+{
+	Term poly[];
+	public Poly(int numberOfTerms,int []coefficients,int[] power)
+	{
+		poly= new Term[numberOfTerms];
+		
+		for(int i=0; i<numberOfTerms; i++)
+		{
+			poly[i]=new Term(coefficients[i],power[i]);
+		}
+	}
+	
+	
+}

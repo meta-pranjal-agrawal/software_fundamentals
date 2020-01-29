@@ -1,0 +1,19 @@
+
+public final class Poly 
+{
+	int coefficients[];
+	public Poly(int []coefficients)
+	{
+		this.coefficients=coefficients;
+	}
+	
+	
+	
+	
+	public static void main(String[] args) 
+	{
+		
+		
+	}
+
+}

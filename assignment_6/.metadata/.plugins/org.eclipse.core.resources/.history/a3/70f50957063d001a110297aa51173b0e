@@ -1,0 +1,102 @@
+
+public final class IntSet 
+{
+	//final int []universalSet= new int[1000];
+	//final int size=0;
+	final int []set;
+	
+	public IntSet(int []set)
+	{
+		this.set=set;	
+	}
+	
+	public  boolean isMember(int x)
+	{
+		for(int i=0; i<set.length; i++)
+		{
+			if(x == set[i])
+			{
+				//System.out.println("it exists");
+				return true;
+			}
+				
+		}
+		
+		return false;
+	}
+	
+	public int size()
+	{
+		return set.length;
+	}
+	
+	public boolean isSubSet(IntSet subSet)
+	{
+		if(subSet.set.length >= set.length)
+		{
+			for(int i=0;i<1000;i++)
+			{
+				if(isMember(subSet.set[i])==false)
+				{
+					return false;
+				}
+			}
+			return true;
+			
+		}
+		
+		return false;
+	}
+	
+	public int []getCompliment()
+	{	
+		int []compliment= new int[1000-set.length];
+		int j=0;
+		for(int i=1;i<=1000;i++)
+		{
+			if(!isMember(i))
+			{
+				compliment[j]=i;
+				j++;
+			}
+		}
+			
+		return compliment;
+	}
+	
+	public int []union(IntSet set1,IntSet set2)
+	{
+		int count=0;
+		for(int i=0;i<set1.set.length;i++)
+		{
+			for(int j=0;j<set2.set.length;j++)
+			{
+				if(set1.set[i]==set2.set[j])
+					count++;
+			}
+		}
+		int union[]= new int[set1.length+set2.length-count];
+		
+		for(int i=0;i<set1.length;i++)
+		{
+			for(int j=0;j<set2.length;j++)
+			{
+				if(set1[i])
+			}
+		}
+		
+		return union;
+	}
+
+	public static void main(String[] args)
+	{
+		IntSet intset= new IntSet(new int[]{1,2,3,4});
+		//System.out.println(intset.isMember(6));
+		int complement[]= intset.getCompliment();
+		
+		
+		
+		
+	}
+
+}

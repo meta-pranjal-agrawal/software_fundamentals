@@ -1,0 +1,16 @@
+import static org.junit.Assert.assertEquals;  
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+public class IntSetTest 
+{
+	@Test
+	public void isMemberTest()
+	{
+		IntSet intSet= new IntSet(new int[]{1,2,3,4});
+		boolean result= intSet.isMember(2);
+		assertEquals(true,result);
+		
+	}
+
+}

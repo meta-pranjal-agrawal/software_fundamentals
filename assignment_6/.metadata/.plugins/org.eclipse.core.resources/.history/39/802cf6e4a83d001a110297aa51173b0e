@@ -1,0 +1,28 @@
+
+public final class Poly 
+{
+	int coefficients[];
+	
+	public Poly(int []coefficients)
+	{
+		this.coefficients=coefficients;
+	}
+	
+	public float evaluate(float value)
+	{
+		
+		
+		
+		return 0.0f;
+	}
+	
+	
+	
+	
+	public static void main(String[] args) 
+	{
+		
+		
+	}
+
+}

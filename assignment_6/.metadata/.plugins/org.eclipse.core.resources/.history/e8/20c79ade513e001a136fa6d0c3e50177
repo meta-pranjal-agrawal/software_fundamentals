@@ -1,0 +1,225 @@
+
+public class PolyMethods 
+{
+	
+	public static Poly simplify(Poly polynomial)
+	{
+		if(polynomial.poly.length ==0)
+		{
+			return new Poly(0,new int[]{0},new int[]{0});
+		}
+		int count=0;
+		for(int i=0;i<polynomial.poly.length-1;i++)
+		{
+			for(int j=i+1;j<polynomial.poly.length;j++)
+			{
+				if(polynomial.poly[i].coefficients==0 || polynomial.poly[j].coefficients ==0)
+				{
+					polynomial.poly[j].power = 0;
+				}
+				if(polynomial.poly[i].power == polynomial.poly[j].power)
+				{
+					count++;
+					polynomial.poly[i].coefficients = polynomial.poly[i].coefficients + polynomial.poly[j].coefficients;
+					polynomial.poly[j].coefficients = 0;
+					polynomial.poly[j].power = 0;
+				}
+			}
+		}
+		
+		
+
+		for(int i=0; i<polynomial.poly.length-1 ;i++)
+		{
+			for(int j=i+1; j<polynomial.poly.length; j++)
+			{
+				if(polynomial.poly[j].coefficients==0 || polynomial.poly[i].coefficients ==0)
+				{
+					continue;
+				}
+				if(polynomial.poly[i].power < polynomial.poly[j].power)
+				{
+					int tempcoeff = polynomial.poly[j].coefficients;
+					int temppow = polynomial.poly[j].power;
+					polynomial.poly[j].coefficients = polynomial.poly[i].coefficients;
+					polynomial.poly[j].power = polynomial.poly[i].power;
+					polynomial.poly[i].coefficients = tempcoeff;
+					polynomial.poly[i].power = temppow;
+				}
+			}
+		}
+		
+		Poly simplified;
+		int coeff[]= new int[polynomial.poly.length-count];
+		int power[]= new int[polynomial.poly.length-count];
+		
+		for(int i=0; i<coeff.length; i++)
+		{
+			if(polynomial.poly[i].coefficients!= 0)
+			{
+				coeff[i]= polynomial.poly[i].coefficients;
+				power[i]= polynomial.poly[i].power;
+			}
+			
+		}
+		
+		simplified=new Poly(coeff.length,coeff,power);
+
+		return simplified;
+	}
+	
+	public static Poly add(Poly poly1,Poly poly2)
+	{
+		if(poly1.poly.length==0 && poly2.poly.length==0)
+		{
+			return new Poly(0,new int[]{0},new int[]{0});
+		}
+		
+		Poly poly3;
+		int count=0;
+		for(int i=0; i<poly1.poly.length; i++)
+		{
+			for(int j=0; j<poly2.poly.length; j++)
+			{
+				if(poly1.poly[i].power==poly2.poly[j].power)
+					count++;
+			}
+		}
+		
+		int sumCoefficient[]= new int[poly1.poly.length+poly2.poly.length-count];
+		int sumPower[]= new int[poly1.poly.length+poly2.poly.length-count];
+		int k=0;
+		
+		for(int i=0; i<poly1.poly.length; i++)
+		{
+			int flag=0;
+			for(int j=0; j<poly2.poly.length; j++)
+			{
+				if(poly1.poly[i].power == poly2.poly[j].power)
+				{
+					flag=1;
+					sumCoefficient[k] =poly1.poly[i].coefficients+poly2.poly[j].coefficients;
+					sumPower[k] = poly1.poly[i].power;
+					k++;
+					poly2.poly[j].coefficients = 0;
+				}
+			}
+			if(flag==0)
+			{
+				sumCoefficient[k] = poly1.poly[i].coefficients;
+				sumPower[k] = poly1.poly[i].power;
+				k++;
+			}
+		}
+		
+		for(int i=0; i<poly2.poly.length; i++)
+		{
+			if(poly2.poly[i].coefficients!=0)
+			{
+				sumCoefficient[k] = poly2.poly[i].coefficients;
+				sumPower[k] = poly2.poly[i].power;
+				k++;
+			}	
+				
+		}
+		poly3= new Poly(sumCoefficient.length,sumCoefficient,sumPower);
+		poly3=simplify(poly3);
+		
+		System.out.print("sum=");
+		for(int i=0; i<poly3.poly.length; i++)
+		{
+			if(poly3.poly[i].power!= 0)
+				System.out.print(poly3.poly[i].coefficients+"x"+"^"+poly3.poly[i].power+"+");
+			else
+				System.out.print(poly3.poly[i].coefficients);
+			
+		}
+		System.out.println();
+		
+		return poly3;
+		
+	}
+	
+	public static double evaluate(float value)
+	{
+		int []coeff= new int[]{2,4,5};
+		int []power=new int[]{4,5,2};
+		double sum=0;
+		for(int i=0; i<coeff.length; i++)
+		{
+			sum = sum+coeff[i] * Math.pow(value, power[i]);
+		}
+		
+		return sum;
+	}
+	
+	public static Poly multiply(Poly poly1,Poly poly2)
+	{
+		if(poly1.poly.length==0 || poly2.poly.length==0)
+		{
+			return new Poly(0,new int[]{0},new int[]{0});
+		}
+		
+		int []multipliedCoefficients=new int[100];
+		int []multipliedPowers=new int[100];
+		int k=0;
+		for(int i=0; i<poly1.poly.length; i++)
+		{
+			for(int j=0; j<poly2.poly.length;j++)
+			{
+				multipliedCoefficients[k] = (poly1.poly[i].coefficients) * (poly2.poly[j].coefficients);
+				multipliedPowers[k] = poly1.poly[i].power+poly2.poly[j].power;
+				k++;
+			}
+		}
+		for(int i=0; i<poly2.poly.length; i++)
+		{
+			System.out.println("coeff="+poly2.poly[i].coefficients+"power="+poly2.poly[i].power);
+		}
+		
+		
+		Poly multipliedPoly=new Poly(multipliedCoefficients.length,multipliedCoefficients,multipliedPowers);
+		//multipliedPoly=simplify(multipliedPoly);
+		
+		/*for(int i=0; i<multipliedPoly.poly.length; i++)
+		{
+			if(multipliedPoly.poly[i].power!= 0)
+				System.out.print(multipliedPoly.poly[i].coefficients+"x"+"^"+multipliedPoly.poly[i].power+"+");
+			else
+				System.out.print(multipliedPoly.poly[i].coefficients);
+			
+		}
+		System.out.println();*/
+		
+		return multipliedPoly;
+	}
+
+	public static void main(String[] args)
+	{
+		int coeff1[]=new int[]{2,3,1};
+		int pow1[]=new int[]{2,1,0};
+		Poly poly1= new Poly(coeff1.length,coeff1,pow1);
+		poly1=simplify(poly1);
+		
+		int coeff2[]=new int[]{1,2,3};
+		int pow2[]=new int[]{4,2,1};
+		Poly poly2=new Poly(coeff2.length,coeff2,pow2);
+		poly2=simplify(poly2);
+		
+		
+		Poly sum=add(poly1,poly2);
+		
+		double evaluation=evaluate(2.2f);
+		System.out.println("value at 2.2="+evaluation);
+		
+		for(int i=0; i<poly2.poly.length; i++)
+		{
+			System.out.println("coeff="+poly2.poly[i].coefficients+"power="+poly2.poly[i].power);
+		}
+		
+		Poly multipliedPoly=multiply(poly1, poly2);
+		
+
+	}
+
+}
