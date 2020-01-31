@@ -1,0 +1,11 @@
+
+public class ZoneMammal1 extends Mammal
+{
+	
+	 int numberOfCages=4;
+	 boolean hasPark=true;
+	 boolean hasCanteen=false;
+	 
+	 
+	 
+}

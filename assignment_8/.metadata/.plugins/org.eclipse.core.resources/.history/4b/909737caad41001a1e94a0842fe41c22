@@ -1,0 +1,7 @@
+
+abstract public class Bird extends Animal {
+
+	@Override
+	abstract public String getSound();
+
+}

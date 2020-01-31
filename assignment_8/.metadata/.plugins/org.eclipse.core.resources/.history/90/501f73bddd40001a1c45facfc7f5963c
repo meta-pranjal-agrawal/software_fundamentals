@@ -1,0 +1,11 @@
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class ZoneMammal1 extends Zone
+{
+	
+	 numberOfCages=10;
+	 
+	 
+}

@@ -1,0 +1,13 @@
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class Zone 
+{
+	
+	 int numberOfCages;
+	 boolean hasPark;
+	 boolean hasCanteen;
+	 
+	 
+}

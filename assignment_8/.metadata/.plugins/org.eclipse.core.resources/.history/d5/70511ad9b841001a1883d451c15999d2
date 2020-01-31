@@ -1,0 +1,23 @@
+
+public class Lion extends Mammal
+{
+	String name;
+	int id=0;
+	
+	public Lion(String name)
+	{
+		this.name=name;
+		idLion++;
+	}
+	
+	@Override
+	public String getSound() 
+	{
+		
+		
+		return "roars";
+	}
+	
+	
+	
+}

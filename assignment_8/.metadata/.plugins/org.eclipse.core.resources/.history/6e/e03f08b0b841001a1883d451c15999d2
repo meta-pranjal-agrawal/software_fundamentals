@@ -1,0 +1,12 @@
+
+public class Snake extends Reptile
+{
+
+	@Override
+	public String getSound() {
+		
+		return "hiss";
+	}
+	
+
+}
