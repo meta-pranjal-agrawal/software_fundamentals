@@ -1,0 +1,7 @@
+
+abstract public class Reptile extends Animal{
+
+	@Override
+	abstract public String getSound();
+
+}

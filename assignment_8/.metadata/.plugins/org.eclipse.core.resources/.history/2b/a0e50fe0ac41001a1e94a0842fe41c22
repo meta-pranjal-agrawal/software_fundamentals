@@ -1,0 +1,13 @@
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class Cage 
+{
+	List <Animal> cage=new ArrayList<Animal>();
+	
+	 public void addAnimal()
+	 {
+		 
+	 }
+}

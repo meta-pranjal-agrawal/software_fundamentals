@@ -1,0 +1,13 @@
+
+abstract public class Animal 
+{
+	String name;
+	int age;
+	float weight;
+	
+	abstract public String getSound();
+	
+	
+	
+
+}

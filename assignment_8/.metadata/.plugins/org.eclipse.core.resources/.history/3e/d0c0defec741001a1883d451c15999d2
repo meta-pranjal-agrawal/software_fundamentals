@@ -1,0 +1,22 @@
+
+public class Snake extends Reptile
+{
+
+	
+	public Snake(String name)
+	{
+		this.name=name;
+		id++;
+		this.weight=weight;
+		this.age=age;
+		this.sound="roars";
+	}
+
+	@Override
+	public String getSound() {
+		
+		return "hiss";
+	}
+	
+
+}

@@ -1,0 +1,13 @@
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class Zone 
+{
+	 int limitOfCages;
+	 int numberOfCages;
+	 boolean hasPark;
+	 boolean hasCanteen;
+	 
+	 List<Cage> zone= new ArrayList<Cage>();
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="cageList" key="selection"/>
+		<list key="findhistory">
+			<item value="cageList"/>
+			<item value="zone"/>
+			<item value="zoneList"/>
+			<item value="zoo"/>
+			<item value="Zoo"/>
+			<item value="Lion"/>
+		</list>
+	</section>
+</section>
