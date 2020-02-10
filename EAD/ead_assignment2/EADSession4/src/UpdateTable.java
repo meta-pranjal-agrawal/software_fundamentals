@@ -38,7 +38,7 @@ public class UpdateTable extends HttpServlet {
 			String organization=request.getParameter("organization");
 			
 			HttpSession session=request.getSession(false);
-			String id= ""+session .getAttribute("id");
+			String id= ""+session .getAttribute("empId");
 			
 			String query="update employees set FullName='"+fullName+"',Gender='"+gender+"',Email='"+email+"',"
 						 + "ContactNumber='"+contactNumber+"',Organization='"+organization+"' where EmployeeID='"+id+"'";

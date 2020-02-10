@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.mysql.jdbc.Statement;
 
@@ -53,8 +54,9 @@ public class RegisterEmployee extends HttpServlet {
 			if(rs.next())
 			{
 				String empId=rs.getString("EmployeeID");
-				
 				request.setAttribute("empId", empId);
+				HttpSession session=request.getSession();
+				session.setAttribute("empId", empId);
 			}	
 			
 				RequestDispatcher rd= request.getRequestDispatcher("VehicleRegistration.jsp");

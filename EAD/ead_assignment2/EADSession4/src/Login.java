@@ -46,7 +46,7 @@ public class Login extends HttpServlet {
 				if(password.equals(dbPassword))
 				{	
 					HttpSession session=request.getSession();
-					session.setAttribute("id", id);
+					session.setAttribute("empId", id);
 					
 					RequestDispatcher rd=request.getRequestDispatcher("HomePage.jsp");
 					rd.forward(request,response);

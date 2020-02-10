@@ -42,6 +42,7 @@ public class VehicleRegistration extends HttpServlet {
 			stmt.setString(3, vehicleNumber);
 			stmt.setString(4, empId);
 			stmt.setString(5, identification);
+			
 			stmt.executeUpdate();
 			
 			request.setAttribute("VehicleType", vehicleType);
