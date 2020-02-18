@@ -1,0 +1,33 @@
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import java.sql.*;
+
+
+public class StudentsDB extends HttpServlet
+{
+	
+
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException 
+	{
+		String name=req.getParameter("name");
+		Connection con = ConnectionUtility.getConnection();
+		try {
+			Statement stmt = con.createStatement();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		String query = "insert into students(First_Name,Last_Name,e-Mail,Father's_Name,Class,Age)"+ "values(?,?,?,?,?,?)";
+		}
+
+}

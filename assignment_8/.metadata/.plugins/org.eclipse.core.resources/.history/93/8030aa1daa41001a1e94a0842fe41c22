@@ -1,0 +1,11 @@
+import java.util.ArrayList;
+import java.util.List;
+
+
+abstract public class Cage 
+{
+	List <Animal> cages=new ArrayList<Animal>();
+	
+	
+	abstract public void addAnimal();
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>
+ Metacube Parking
+	</title>
+</head>
+<body>
+<h1>
+        Metacube Parking System
+    </h1>
+    
+    <h1 align="right">
+    	<a href="Login.html">Login</a>
+    </h1>
+
+    <fieldset>
+        <legend name="formTitle"> Employee Registration Form </legend>
+        <form name="empRegistrationForm" method="post" action="RegisterEmployee">
+
+            <input name="empName" type="text" required placeholder="Name">
+
+            <br> <br>
+
+            <select name="gender">
+            	<option value="Male">Male</option>
+            	<option value="Female"> Female </option>
+            </select>
+            <br>
+            <br>
+
+            <input type="email" name="emailid" required placeholder="Email name"> <br> <br>
+
+            <input type="password" name="empPassword" required placeholder="Password"> <br> <br>
+            <input type="password" name="empConfirmPassword" required placeholder="Confirm Password"> <br> <br>
+
+            <input type="text" name="empPhoneNumber" required placeholder="Phone number"> <br> <br>
+            <select name="organization">
+            <option disabled selected hidden>Organization</option>
+            <option>Metacube</option>
+            <option>Thrillophilia</option>
+            <option> ATCS </option>
+            <option>Infosys</option>
+            <option>Mahindra </option>
+            
+            
+            </select>
+
+            <input type="submit" value="submit" >
+            <br>
+            <br>
+
+        </form>
+    </fieldset>
+</body>
+</html>

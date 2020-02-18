@@ -1,0 +1,18 @@
+import java.sql.DriverManager;
+
+
+public class Connection {
+
+	public static void main(String[] args) {
+		try
+		{
+			Connection myconn= DriverManager.getConnection("jdbc:")
+		}
+		catch(Exception e)
+		{
+			
+		}
+
+	}
+
+}
