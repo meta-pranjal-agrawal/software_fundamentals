@@ -1,0 +1,10 @@
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class Cage 
+{
+	List <Animal> cages=new ArrayList<Animal>();
+
+
+}

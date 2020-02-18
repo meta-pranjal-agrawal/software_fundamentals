@@ -1,0 +1,25 @@
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class Zoo 
+{
+	
+	List<Zone> zone= new ArrayList<Zone>();
+	
+	public void addZone(String category,int limitOfCages,boolean hasPark,boolean hasCanteen)
+	{
+		Zone z1= new Zone(category,limitOfCages,hasPark,hasCanteen);
+		zone.add(z1);
+	}
+	
+	
+	
+
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+
+	}
+
+}

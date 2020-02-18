@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<a href="RegisterStudent.html"> Register student</a> <br> <br>
+<form method="get" action="ShowStudent">
+<input type="submit"> Show students
+</form>
+<br> <br>
+<a href="SearchStudent.html">Search Student</a>
+</body>
+</html>

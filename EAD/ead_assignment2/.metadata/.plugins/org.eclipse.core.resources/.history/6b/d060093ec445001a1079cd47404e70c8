@@ -1,0 +1,54 @@
+package com.ead;
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import java.sql.*;
+
+
+public class StudentsDB extends HttpServlet
+{
+	
+	@Override
+	protected void service(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException 
+	{
+		
+		String firstName=req.getParameter("firstName");
+		String lastName=req.getParameter("lastName");
+		String eMail=req.getParameter("e-Mail");
+		String fatherName=req.getParameter("fatherName");
+		int classNumber=Integer.parseInt(req.getParameter("class"));
+		int age=Integer.parseInt(req.getParameter("age"));
+		Connection con = ConnectionUtility.getConnection();
+		PreparedStatement stmt;
+		try {
+			 stmt = con.prepareStatement("insert into students values(?,?,?,?,?,?)");
+			 //String query = "insert into Students(First_Name,Last_Name,e-Mail,Father_Name,Class,Age)"+ "values(firstName,lastName,eMail,fatherName,classNumber,age)";
+			 stmt.setString(1, firstName);
+			 stmt.setString(2, lastName);
+			 stmt.setString(3, eMail);
+			 	 
+			 
+			 stmt.executeUpdate();
+			 
+		}
+		catch (SQLException e) 
+		{
+			e.printStackTrace();
+		}
+	
+	}
+//	@Override
+//	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+//			throws ServletException, IOException 
+//	{
+//		
+//	}
+
+}

@@ -1,0 +1,23 @@
+
+public class Peacock extends Bird
+{
+	
+	public Peacock(String name,float weight,int age)
+	{
+		this.name=name;
+		id++;
+		this.weight=weight;
+		this.age=age;
+		this.sound="roars";
+	}
+	
+	
+	@Override
+	public String getSound() {
+		
+				
+		return "screams";
+	}
+	
+
+}

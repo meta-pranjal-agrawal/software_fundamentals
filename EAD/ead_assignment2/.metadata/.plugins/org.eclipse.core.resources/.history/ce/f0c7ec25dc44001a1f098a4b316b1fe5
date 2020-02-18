@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form>
+	<input type="text" placeholder="Enter first name" id="firstname"> <br>
+	<input type="text" placeholder="Enter last name"  id="lastname"> <br>
+	<input type="text" placeholder="Enter father's name" id="fathername"> <br>
+	<input type="email" placeholder="Enter first name" id="email"> <br>
+	<input type="number" placeholder="Enter first name" id="class"> <br>
+	<input type="number" placeholder="Enter first name" id="age"> <br>
+	<input type="submit" value="submit">
+	
+</form>
+</body>
+</html>
