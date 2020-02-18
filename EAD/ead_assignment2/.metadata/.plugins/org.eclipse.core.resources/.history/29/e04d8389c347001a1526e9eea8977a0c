@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Student Registration Form</title>
+<link rel="stylesheet" href="Register.css">
+</head>
+<body>
+<div class="container">  
+ <form id="contact" method="post" action="RegisterStudent">
+  
+   <fieldset>
+     <input placeholder="Your first name" type="text"  required autofocus name="firstName">
+   </fieldset>
+   <fieldset>
+     <input placeholder="Your last name" type="text"  required name="lastName">
+   </fieldset>
+   <fieldset>
+     <input placeholder="Your Email Address" type="text"  required name="email">
+   </fieldset>
+   <fieldset>
+     <input placeholder="Your Father's name" type="text"  required name="fatherName">
+   </fieldset>
+   <fieldset>
+     <input placeholder="Your class" type="text"  required name="class">
+   </fieldset>
+   <fieldset>
+     <input placeholder="Your age" type="text"  required name="age">
+   </fieldset>
+   
+   <fieldset>
+     <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+   </fieldset>
+
+ </form>
+</div>
+</body>
+</html>

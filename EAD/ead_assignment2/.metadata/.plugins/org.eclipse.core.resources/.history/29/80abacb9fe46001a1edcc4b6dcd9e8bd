@@ -1,0 +1,53 @@
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.*;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.mysql.jdbc.ResultSet;
+import com.mysql.jdbc.Statement;
+
+/**
+ * Servlet implementation class ShowStudent
+ */
+@WebServlet("/ShowStudent")
+public class ShowStudent extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void doGet(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+		try {
+			
+			Connection con = ConnectionUtility.getConnection();
+			Statement stmt = (Statement) con.createStatement();
+			String query = "Select * from students";
+
+			ResultSet rs = (ResultSet) stmt.executeQuery(query);
+			PrintWriter out = response.getWriter();
+			while (rs.next()) {
+
+				String firstname = rs.getString("First_Name");
+				String lastname=rs.getString("Last_Name");
+				String email=rs.getString("E-Mail");
+				String fatherName=rs.getString("Fathers_Name");
+				String classnumber=rs.getString("Class");
+				String age=rs.getString("Age");
+				
+				out.print("<p>" + firstname + lastname+ email + fatherName + classnumber + age +"</p>");
+			}
+
+		}
+		catch (Exception e) 
+		{
+
+		}
+
+	}
+
+}

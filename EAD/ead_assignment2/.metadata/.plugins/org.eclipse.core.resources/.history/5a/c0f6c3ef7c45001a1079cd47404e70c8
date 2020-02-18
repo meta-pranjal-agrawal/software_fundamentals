@@ -1,0 +1,50 @@
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import java.sql.*;
+
+
+public class StudentsDB extends HttpServlet
+{
+	
+
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException 
+	{
+		
+		String fistName=req.getParameter("firstName");
+		String lastName=req.getParameter("LastName");
+		String eMail=req.getParameter("e-Mail");
+		String fatherName=req.getParameter("fatherName");
+		int classnumber=Integer.parseInt(req.getParameter("class"));
+		int age=Integer.parseInt(req.getParameter("age"));
+		Connection con = ConnectionUtility.getConnection();
+		Statement stmt;
+		try {
+			 stmt = con.createStatement();
+			 String query = "insert into students(First_Name,Last_Name,e-Mail,Father_Name,Class,Age)"+ "values(?,?,?,?,?,?)";
+			 stmt.execute(query);
+			 
+		}
+		catch (SQLException e) 
+		{
+			e.printStackTrace();
+		}
+	
+	}
+//	@Override
+//	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+//			throws ServletException, IOException 
+//	{
+//		
+//	}
+
+}
