@@ -1,0 +1,148 @@
+<html>
+
+<head>
+    <title>MetaParking System</title>
+    <link href="UISession1.css" rel="stylesheet">
+</head>
+
+
+<body>
+    <nav class="navBar" id="navBar">
+
+        <a href="#empRegistrationForm" class="navlink">Add Employee</a>
+        <a href="#vehicleForm" class="navlink">Add Vehicle</a>
+        <a href="#feedbackForm" class="navlink">Give Feedback</a>
+        <a href="#pricing" class="navlink">Price</a>
+
+    </nav>
+
+    <div>
+        <img src="parking.jpg" class="CoverImage" id="CoverImage">
+    </div>
+    <div>
+        <button id="addEmployeeButton" class="addButton" onclick="addEmployeeRegistration()">Add Employee</button>
+    </div>
+
+    <div id="empRegistrationForm" class="forms">
+        <h2>Employee Registration</h2>
+        <form>
+
+            <input type="text" id="empName" placeholder="Enter Name" required><br> Gender:
+            <label>
+                    <input type="radio" id="gendermale" name="gender" value="Male" required>Male </label>
+            <label>
+                    <input type="radio" id="genderfemale" name="gender" value="Female" required>Female <br>
+                </label>
+            <input type="text" placeholder="Email id" id="empEmail" name="empEmail" required><br>
+            <input type="password" placeholder="Password" id="empPassword" name="empPassword" required> <br>
+            <input type="password" placeholder="Confirm Password" id="empConfirmPassword" name="empConfirmPassword" required><br>
+            <input type="text" placeholder="Contact Number" id="empContactNumber" name="empContactNumber" required><br>
+            <input type="submit" value="Register" class="submitbtn">
+        </form>
+    </div>
+
+    <div>
+        <button id="addVehicleButton" class="addButton" onclick="addVehicleRegistration()">Add Vehicle</button>
+    </div>
+    <div id="vehicleForm" class="forms">
+        <h2>Vehicle Registration</h2>
+        <form>
+            <input type="text" placeholder="Vehicle Make (company)" id="vehicleComapny" name="vehicleComapny" required><br>
+            <input type="text" placeholder="Vehicle Model" id="vehicleModel" name="vehicleModel"><br>
+            <select>
+                    <option value="Cycle">Cycle</option>
+                    <option value="Bike">Bike</option>
+                    <option value="Car">Car</option>
+                </select>
+            <br>
+            <input type="text" placeholder="Vehicle Number" id="vehicleNumber" name="vehicleNumber" required>
+            <br>
+            <input type="text" id="empId" name="empId" placeholder="Employee id" required>
+            <br>
+            <textarea placeholder="Vehicle Description" id="vehicleDescription" name="vehicleDescription" cols="26"></textarea>
+            <br>
+            <input type="submit" value="submit" class="submitbtn">
+        </form>
+        </fieldset>
+    </div>
+    <div>
+        <button id="addFeedbackButton" class="addButton" onclick="addFeedback()">Feedback</button>
+    </div>
+    <div id="feedbackForm" class="forms">
+        <h2>Feedback Form</h2>
+        <form>
+            <input type="text" placeholder="Name" required><br>
+            <input type="text" placeholder="Email" required><br>
+            <textarea placeholder="Feedback" cols="26" required></textarea><br>
+            <input type="submit" value="submit" class="submitbtn">
+
+        </form>
+
+
+    </div>
+
+    <div>
+        <button id="addPricingButton" class="addButton" onclick="addPricing()">Pricing</button>
+    </div>
+
+
+    <div id="pricing" class="forms">
+
+        <div id="cyclePrice">
+            <h3>Cycle</h3>
+            <div id="cyclePass">
+                <p>
+                    <span class="priceTitle">$100</span>/month
+                </p>
+            </div>
+            <div>
+                <p><span>$5 Daily</span></p>
+                <p><span>$100 Monthly</span></p>
+                <p><span>$500 Yearly</span></p>
+            </div>
+            <div>
+                <input type="button" value="Purchase Now" class="submitbtn">
+            </div>
+        </div>
+
+        <div id="motorCyclePrice">
+            <h3>MotorCycle</h3>
+            <div id="bikePass">
+                <p>
+                    <span class="priceTitle">$200</span>/month
+                </p>
+            </div>
+            <div>
+                <p><span>$10 Daily</span></p>
+                <p><span>$200 Monthly</span></p>
+                <p><span>$1000 Yearly</span></p>
+            </div>
+            <div>
+                <input type="button" value="Purchase Now" class="submitbtn">
+            </div>
+        </div>
+
+        <div id="fourWheelerPrice">
+            <h3>Four Wheeler</h3>
+            <div id="carPass">
+                <p>
+                    <span class="priceTitle">$500</span>/month
+                </p>
+            </div>
+            <div>
+                <p><span>$20 Daily</span></p>
+                <p><span>$500 Monthly</span></p>
+                <p><span>$3500 Yearly</span></p>
+            </div>
+            <div>
+                <input type="button" value="Purchase Now" class="submitbtn">
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="UISession1.js"></script>
+</body>
+
+</html>
