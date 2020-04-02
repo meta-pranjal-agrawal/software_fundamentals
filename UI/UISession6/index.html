@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Annex - Responsive Bootstrap 4 Admin Dashboard</title>
+    <!-- <script src="https://kit.fontawesome.com/68c06cb343.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/3.0.39/css/materialdesignicons.min.css">
+
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2 px-0">
+                <div class="scrollable shadow">
+                    <div class="my-4">
+                        <h5 class="text-center py-1">
+                            <i class="mdi mdi-assistant"></i>
+                            <strong>ANNEX</strong>
+                        </h5>
+                    </div>
+                    <div class="nav-side">
+                        <div class="pt-4">
+                            <div class="px-4 mb-4">
+                                <span class="p-4 text-muted">Main</span>
+                            </div>
+                            <div class="list-group d-flex flex-column">
+                                <a class="list-group-item active list-group-item-action border-0 d-flex flex-row justify-content-between" data-toggle="list">
+                                    <div class="px-2" href="#">
+                                        <span class="p-2 text-dark">
+									<i class="mdi mdi-airplay"></i>
+									Dashboard
+								</span>
+                                    </div>
+                                    <span class="badge badge-pill badge-primary mt-1 float-right">7</span>
+                                </a>
+                                <a href="#UIcollapse" data-toggle="collapse" class="list-group-item list-group-item-action border-0 d-flex flex-row justify-content-between">
+                                    <div class="px-2" href="#UIcollapse">
+                                        <span class="p-2 text-black">
+									<i class="mdi mdi-layers"></i>
+									Advanced UI
+                                </span>
+
+                                    </div>
+                                    <span class="float-md-right"><i class="mdi mdi-chevron-right"></i></span>
+                                    <!-- <img src="images/chevron-right.png"> -->
+                                </a>
+                                <div class="collapse ml-5" id="UIcollapse">
+                                    <ul class="list-unstyled text-muted justify-content-center">
+                                        <li class="p-2"> Highlight</li>
+                                        <li class="p-2"> Rating</li>
+                                        <li class="p-2"> Alertify</li>
+                                        <li class="p-2"> Range Slider</li>
+                                    </ul>
+                                </div>
+                                <a class="list-group-item list-group-item-action border-0 d-flex flex-row justify-content-between">
+                                    <div class="px-2" href="#">
+                                        <span class="p-2 text-black">
+									<i class="mdi mdi-calendar-clock"></i>
+									Calendar
+								</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="pt-4">
+                            <div class="px-4 mb-4">
+                                <span class="p-4 text-muted">Component</span>
+                            </div>
+                            <div class="list-group d-flex flex-column">
+                                <a data-target="#UIelements-collapse" href="#" class="list-group-item list-group-item-action border-0 d-flex flex-row justify-content-between" data-toggle="collapse">
+                                    <div class="px-2" href="#">
+                                        <span class="p-2 text-black">
+									<i class="mdi mdi-bullseye"></i>
+									UI Elements
+                                </span>
+
+
+                                    </div>
+                                    <span class="float-right"><i class="mdi mdi-chevron-right"></i></span>
+                                </a>
+                                <div class="collapse ml-5" id="UIelements-collapse">
+                                    <ul class="list-unstyled text-muted">
+                                        <li class="p-2">Buttons</li>
+                                        <li class="p-2">Cards</li>
+                                        <li class="p-2">Tabs & Accordions</li>
+                                        <li class="p-2">Modals</li>
+                                        <li class="p-2">Images</li>
+                                        <li class="p-2">Alerts</li>
+                                        <li class="p-2">ProgressBars</li>
+                                        <li class="p-2">Dropdowns</li>
+                                        <li class="p-2">Lightbox</li>
+                                        <li class="p-2">Navs</li>
+                                        <li class="p-2">Pagination</li>
+                                        <li class="p-2">Popover Tooltips</li>
+                                        <li class="p-2">Badge</li>
+                                        <li class="p-2">Carousel</li>
+                                        <li class="p-2">Video</li>
+                                        <li class="p-2">Typography</li>
+                                        <li class="p-2">Sweet-Alert</li>
+                                        <li class="p-2">Grid</li>
+                                    </ul>
+                                </div>
+                                <a href="#form-collapse" class="list-group-item list-group-item-action border-0 d-flex flex-row justify-content-between" data-toggle="collapse">
+                                    <div class="px-2" href="#">
+                                        <span class="p-2 text-black">
+									<i class="mdi mdi-clipboard-outline"></i>
+									Forms
+								</span>
+                                    </div>
+                                    <span class="badge badge-pill badge-primary float-right mt-1">8</span>
+                                </a>
+                                <div class="collapse ml-5" id="form-collapse">
+                                    <ul class="list-unstyled text-muted">
+                                        <li class="p-2">Form Elements</li>
+                                        <li class="p-2">Form Validation</li>
+                                        <li class="p-2">Form Advanced</li>
+                                        <li class="p-2">Form Editors</li>
+                                        <li class="p-2">Form File Upload</li>
+                                        <li class="p-2">Form Mask</li>
+                                        <li class="p-2">Summernote</li>
+                                        <li class="p-2">Form Xeditable</li>
+                                    </ul>
+                                </div>
+                                <a href="#chart-collapse" class="list-group-item list-group-item-action border-0 d-flex flex-row justify-content-between" data-toggle="collapse">
+                                    <div class="px-2" href="#">
+                                        <span class="p-2 text-black">
+									<i class="mdi mdi-gauge"></i>
+									Charts
+                                </span>
+
+                                    </div>
+                                    <span class="float-right"><i class="mdi mdi-chevron-right"></i></span>
+                                    <!-- <img src="images/chevron-right.png"> -->
+                                </a>
+                                <div class="collapse ml-5" id="chart-collapse">
+                                    <ul class="list-unstyled text-muted">
+                                        <li class="p-2">Morris Chart</li>
+                                        <li class="p-2">Chartist Chart</li>
+                                        <li class="p-2">Chartjs Chart</li>
+                                        <li class="p-2">Flot Chart</li>
+                                        <li class="p-2">C3 Chart</li>
+                                        <li class="p-2">Jquery Knob Chart</li>
+                                    </ul>
+                                </div>
+                                <a href="#icon-collapse" class="list-group-item list-group-item-action border-0 d-flex flex-row justify-content-between" data-toggle="collapse">
+                                    <div class="px-2" href="#">
+                                        <span class="p-2 text-black">
+									<i class="mdi mdi-cards-outline"></i>
+									Icons
+                                </span>
+
+                                    </div>
+                                    <span class="float-right"><i class="mdi mdi-chevron-right"></i></span>
+                                    <!-- <img src="images/chevron-right.png"> -->
+                                </a>
+                                <div class="collapse ml-5" id="icon-collapse">
+                                    <ul class="list-unstyled text-muted">
+                                        <li class="p-2">Material Design</li>
+                                        <li class="p-2">Ion Icons</li>
+                                        <li class="p-2">Font Awesome</li>
+                                        <li class="p-2">Themify Icons</li>
+                                        <li class="p-2">Dripicons</li>
+                                        <li class="p-2">Typicons Icons</li>
+                                    </ul>
+                                </div>
+                                <a href="#table-icon" class="list-group-item list-group-item-action border-0 d-flex flex-row justify-content-between" data-toggle="collapse">
+                                    <div class="px-2" href="#">
+                                        <span class="p-2 text-black">
+									<i class="mdi mdi-table"></i>
+									Tables
+                                </span>
+
+                                    </div>
+                                    <span class="float-right"><i class="mdi mdi-chevron-right"></i></span>
+                                    <!-- <img src="images/chevron-right.png"> -->
+                                </a>
+                                <div class="collapse ml-5" id="table-icon">
+                                    <ul class="list-unstyled text-muted">
+                                        <li class="p-2">Basic Tables</li>
+                                        <li class="p-2">Data Table</li>
+                                        <li class="p-2">Responsive Table</li>
+                                        <li class="p-2">Editable Table</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-4">
+                            <div class="px-4 mb-4">
+                                <span class="p-4 text-muted">Extra</span>
+                            </div>
+                            <div class="list-group d-flex flex-column">
+                                <a href="#map-collapse" class="list-group-item list-group-item-action border-0 d-flex flex-row justify-content-between" data-toggle="collapse">
+                                    <div class="px-2" href="#">
+                                        <span class="p-2 text-black">
+									<i class="mdi mdi-map-marker-multiple"></i>
+									Maps
+								</span>
+                                    </div>
+                                    <span class="badge badge-pill badge-danger float-right mt-1">2</span>
+                                </a>
+                                <div class="collapse ml-5" id="map-collapse">
+                                    <ul class="list-unstyled text-muted">
+                                        <li class="p-2"> Google Map</li>
+                                        <li class="p-2"> Vector Map</li>
+                                    </ul>
+                                </div>
+                                <a href="#page-collapse" class="list-group-item list-group-item-action border-0 d-flex flex-row justify-content-between" data-toggle="collapse">
+                                    <div class="px-2" href="#">
+                                        <span class="p-2 text-black">
+                                            <i class="mdi mdi-google-pages"></i>
+									Pages
+								</span>
+                                    </div>
+                                    <span class="float-right"><i class="mdi mdi-chevron-right"></i></span>
+                                </a>
+                                <div class="collapse ml-5" id="page-collapse">
+                                    <ul class="list-unstyled text-muted">
+                                        <li class="p-2"> Login</li>
+                                        <li class="p-2"> Register</li>
+                                        <li class="p-2"> Recover Password</li>
+                                        <li class="p-2">Lock Screen</li>
+                                        <li class="p-2">Blank Page</li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="col-10">
+                <div class="topbar py-3">
+                    <nav class="px-4">
+                        <ul class="list-inline float-right mb-0 ml-3">
+                            <!-- language-->
+                            <li class="list-inline-item dropdown"><a class="nav-link dropdown-toggle arrow-none text-white" data-toggle="dropdown" href="#">English <img src="images/us_flag.jpg" class="ml-2" height="16" alt=""></a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item" href="#"><img src="images/italy_flag.jpg" alt="" height="16"><span>Italian </span></a>
+                                    <a class="dropdown-item" href="#"><img src="images/french_flag.jpg" alt="" height="16"><span>French </span></a>
+                                    <a class="dropdown-item" href="#"><img src="images/spain_flag.jpg" alt="" height="16"><span>Spanish </span></a>
+                                    <a class="dropdown-item" href="#"><img src="images/russia_flag.jpg" alt="" height="16"><span>Russian</span></a>
+                                </div>
+                            </li>
+                            <li class="list-inline-item dropdown"><a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#"><i class="far fa-envelope fa-lg text-white"></i> <span class="badge badge-danger noti-icon-badge">5</span></a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-arrow dropdown-menu">
+                                    <!-- item-->
+                                    <div class="dropdown-item">
+                                        <h5><span class="badge badge-danger float-right">745</span>Messages</h5>
+                                    </div>
+                                    <!-- item-->
+                                    <a href="" class="dropdown-item"></a>
+                                    <div class="ml-3">
+                                        <img src="images/avatar-2.jpg" alt="user-img" class="img-fluid rounded-circle-profile"></div>
+                                    <p class="ml-4"><b>Charles M. Jones</b><small class="text-muted">Dummy text of the printing and typesetting industry.</small></p>
+                                    </a>
+                                    <!-- item-->
+                                    <a href="" class="dropdown-item">
+                                        <div><img src="images/avatar-3.jpg" alt="user-img" class="img-fluid rounded-circle-profile"></div>
+                                        <p><b>Thomas J. Mimms</b><small class="text-muted">You have 87 unread messages</small></p>
+                                    </a>
+                                    <!-- item-->
+                                    <a href="" class="dropdown-item">
+                                        <div><img src="images/avatar-4.jpg" alt="user-img" class="img-fluid rounded-circle-profile"></div>
+                                        <p><b>Luis M. Konrad</b><small class="text-muted">It is a long established fact that a reader will</small></p>
+                                    </a>
+                                    <!-- All--><a href="" class="dropdown-item">View All</a></div>
+                            </li>
+                            <li class="list-inline-item dropdown">
+                                <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#">
+                                    <i class="far fa-bell fa-lg text-white"></i> <span class="badge badge-success noti-icon-badge">23</span></a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-arrow dropdown-menu">
+                                    <!-- item-->
+                                    <div class="dropdown-item">
+                                        <h5><span class="badge badge-danger float-right">87</span>Notification</h5>
+                                    </div>
+                                    <!-- item-->
+                                    <a href="#" class="dropdown-item">
+                                        <span class="bg-primary rounded-circle">
+                                            <i class="mdi mdi-cart-outline"></i>
+                                        </span>
+
+                                        <span><b>Your order is placed</b><br><small class="text-muted">Dummy text of the printing and typesetting industry.</small></span>
+
+                                    </a>
+                                    <!-- item-->
+                                    <a href="#" class="dropdown-item">
+                                        <span class="bg-success"><i class="mdi mdi-message"></i></span>
+                                        <span><b>New Message received</b><br><small class="text-muted">You have 87 unread messages</small></span>
+                                    </a>
+                                    <!-- item-->
+                                    <a href="#" class="dropdown-item">
+                                        <span class="bg-warning"><i class="mdi mdi-martini"></i></span>
+                                        <span><b>Your item is shipped</b><br><small class="text-muted">It is a long established fact that a reader will</small></span>
+                                    </a>
+                                    <!-- All--><a href="#" class="dropdown-item notify-item">View All</a></div>
+                            </li>
+                            <li class="list-inline-item dropdown notification-list">
+                                <a class="nav-link dropdown-toggle arrow-none nav-user" data-toggle="dropdown" href="#"><img src="images/avatar-1.jpg" alt="user" class="rounded-circle-profile"></a>
+                                <div class="dropdown-menu dropdown-menu-right profile-dropdown">
+                                    <!-- item-->
+                                    <div class="dropdown-item">
+                                        <h5>Welcome</h5>
+                                    </div><a class="dropdown-item" href="#"><i class="mdi mdi-account-circle m-r-5 text-muted"></i> Profile</a> <a class="dropdown-item" href="#"><i class="mdi mdi-wallet m-r-5 text-muted"></i> My Wallet</a>
+                                    <a class="dropdown-item" href="#"><span class="badge badge-success float-right">5</span><i class="mdi mdi-settings m-r-5 text-muted"></i> Settings</a> <a class="dropdown-item" href="#"><i class="mdi mdi-lock-open-outline
+                                            m-r-5 text-muted"></i> Lock screen</a>
+                                    <div class="dropdown-divider"></div><a class="dropdown-item" href="#"><i class="mdi mdi-logout m-r-5 text-muted"></i> Logout</a></div>
+                            </li>
+                        </ul>
+                        <ul class="list-inline menu-left mb-0">
+                            <!-- button side bar -->
+                            <!-- <li class="float-left"><button class="button-menu-mobile open-left waves-light"><i class="mdi mdi-menu"></i></button></li> -->
+                            <li class="">
+                                <form role="search"><input type="text" placeholder="Search..." class=" app-search mt-2"> <a href=""><i class="fa fa-search searchIcon"></i></a></form>
+                            </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </nav>
+                </div>
+                <!-- Top Bar End -->
+                <div class="page-content-wrapper">
+                    <div class="container-fluid">
+                        <div class="row mt-3">
+                            <div class="col-sm-12">
+                                <div class="page-title-box">
+                                    <div class="btn-group float-right">
+                                        <ol class="breadcrumb p-0 m-0">
+                                            <li class="breadcrumb-item"><a href="#">Annex</a></li>
+                                            <li class="breadcrumb-item active">Dashboard</li>
+                                        </ol>
+                                    </div>
+                                    <h4>Dashboard</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end page title end breadcrumb -->
+                    </div>
+
+                </div>
+                <div class="row mt-3">
+                    <!-- Column -->
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="card m-b-30 shadow bg-white rounded">
+                            <div class="card-body">
+                                <div class="d-flex flex-row">
+                                    <div class="col-3 align-self-center">
+                                        <div class="round"><i class="mdi mdi-webcam"></i></div>
+                                    </div>
+                                    <div class="col-6 align-self-center text-center">
+                                        <div class="m-l-10">
+                                            <h5 class="mt-0 round-inner">$18090</h5>
+                                            <p class="mb-0 text-muted">Visits Today</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 align-self-end align-self-center">
+                                        <h6 class="m-0 float-right text-center text-danger"><i class="mdi mdi-arrow-down"></i> <span>5.26%</span></h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <!-- Column -->
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="card m-b-30 shadow bg-white rounded">
+                            <div class="card-body">
+                                <div class="d-flex flex-row">
+                                    <div class="col-3 align-self-center">
+                                        <div class="round"><i class="mdi mdi-account-multiple-plus"></i></div>
+                                    </div>
+                                    <div class="col-6 text-center align-self-center">
+                                        <div class="m-l-10">
+                                            <h5 class="mt-0 round-inner">562</h5>
+                                            <p class="mb-0 text-muted">New Users</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 align-self-end align-self-center">
+                                        <h6 class="m-0 float-right text-center text-success"><i class="mdi mdi-arrow-up"></i> <span>8.68%</span></h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <!-- Column -->
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="card m-b-30 shadow bg-white rounded">
+                            <div class="card-body">
+                                <div class="d-flex flex-row">
+                                    <div class="col-3 align-self-center">
+                                        <div class="round"><i class="mdi mdi-basket"></i></div>
+                                    </div>
+                                    <div class="col-6 align-self-center text-center">
+                                        <div class="m-l-10">
+                                            <h5 class="mt-0 round-inner">7514</h5>
+                                            <p class="mb-0 text-muted">New Orders</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 align-self-end align-self-center">
+                                        <h6 class="m-0 float-right text-center text-danger"><i class="mdi mdi-arrow-down"></i> <span>2.35%</span></h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <!-- Column -->
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="card m-b-30 shadow bg-white rounded">
+                            <div class="card-body">
+                                <div class="d-flex flex-row">
+                                    <div class="col-3 align-self-center">
+                                        <div class="round"><i class="mdi mdi-rocket"></i></div>
+                                    </div>
+                                    <div class="col-6 align-self-center text-center">
+                                        <div class="m-l-10">
+                                            <h5 class="mt-0 round-inner">$32874</h5>
+                                            <p class="mb-0 text-muted">Total Sales</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 align-self-end align-self-center">
+                                        <h6 class="m-0 float-right text-center text-success"><i class="mdi mdi-arrow-up"></i> <span>2.35%</span></h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-12 col-lg-12 col-xl-8">
+                        <div class="card m-b-30 shadow bg-white rounded">
+                            <div class="card-body">
+                                <h5 class=" pb-3 mt-0">Overview</h5>
+                                <div id="multi-line-chart" style="height:400px;">
+                                    <svg height="400" version="1.1" width="649.328" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.2</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><text x="32.859375" y="361" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">0</tspan></text><path fill="none" stroke="#eef0f2" d="M45.359375,361H624.328" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="32.859375" y="277" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">50</tspan></text><path fill="none" stroke="#eef0f2" d="M45.359375,277H624.328" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="32.859375" y="193" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">100</tspan></text><path fill="none" stroke="#eef0f2" d="M45.359375,193H624.328" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="32.859375" y="109" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">150</tspan></text><path fill="none" stroke="#eef0f2" d="M45.359375,109H624.328" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="32.859375" y="25" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">200</tspan></text><path fill="none" stroke="#eef0f2" d="M45.359375,25H624.328" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="624.328" y="373.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2015</tspan></text><text x="527.8772705956185" y="373.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2014</tspan></text><text x="431.4265411912369" y="373.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2013</tspan></text><text x="334.7115632131447" y="373.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2012</tspan></text><text x="238.26083380876312" y="373.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2011</tspan></text><text x="141.81010440438155" y="373.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2010</tspan></text><text x="45.359375" y="373.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7)"><tspan dy="4" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2009</tspan></text><path fill="none" stroke="#e785da" d="M45.359375,361C69.47205735109539,340,117.69742205328616,308.5,141.81010440438155,277C165.92278675547695,245.5,214.14815145766772,106.9,238.26083380876312,109C262.3735161598585,111.1,310.5988808620493,293.8,334.7115632131447,293.8C358.8903077076677,293.8,407.24779669671386,109,431.4265411912369,109C455.53922354233225,109,503.7645882445231,289.6,527.8772705956185,293.8C551.9899529467139,298,600.2153176489046,180.4,624.328,142.6" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#00bcd2" d="M45.359375,361C69.47205735109539,348.4,117.69742205328616,321.1,141.81010440438155,310.6C165.92278675547695,300.1,214.14815145766772,287.5,238.26083380876312,277C262.3735161598585,266.5,310.5988808620493,239.18276333789328,334.7115632131447,226.6C358.8903077076677,213.9827633378933,407.24779669671386,190.9201094391245,431.4265411912369,176.20000000000002C455.53922354233225,161.5201094391245,503.7645882445231,121.60000000000001,527.8772705956185,109C551.9899529467139,96.4,600.2153176489046,83.80000000000003,624.328,75.40000000000003" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#007bff" d="M45.359375,361C69.47205735109539,298,117.69742205328616,113.2,141.81010440438155,109C165.92278675547695,104.8,214.14815145766772,327.4,238.26083380876312,327.4C262.3735161598585,327.4,310.5988808620493,109,334.7115632131447,109C358.8903077076677,109,407.24779669671386,306.3712722298221,431.4265411912369,327.4C455.53922354233225,348.3712722298221,503.7645882445231,304.3,527.8772705956185,277C551.9899529467139,249.70000000000002,600.2153176489046,151,624.328,109" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><circle cx="45.359375" cy="361" r="4" fill="#e785da" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="141.81010440438155" cy="277" r="4" fill="#e785da" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="238.26083380876312" cy="109" r="4" fill="#e785da" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="334.7115632131447" cy="293.8" r="4" fill="#e785da" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="431.4265411912369" cy="109" r="4" fill="#e785da" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="527.8772705956185" cy="293.8" r="4" fill="#e785da" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="624.328" cy="142.6" r="4" fill="#e785da" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="45.359375" cy="361" r="4" fill="#00bcd2" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="141.81010440438155" cy="310.6" r="4" fill="#00bcd2" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="238.26083380876312" cy="277" r="4" fill="#00bcd2" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="334.7115632131447" cy="226.6" r="4" fill="#00bcd2" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="431.4265411912369" cy="176.20000000000002" r="4" fill="#00bcd2" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="527.8772705956185" cy="109" r="4" fill="#00bcd2" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="624.328" cy="75.40000000000003" r="4" fill="#00bcd2" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="45.359375" cy="361" r="4" fill="#007bff" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="141.81010440438155" cy="109" r="4" fill="#007bff" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="238.26083380876312" cy="327.4" r="4" fill="#007bff" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="334.7115632131447" cy="109" r="4" fill="#007bff" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="431.4265411912369" cy="327.4" r="4" fill="#007bff" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="527.8772705956185" cy="277" r="4" fill="#007bff" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="624.328" cy="109" r="4" fill="#007bff" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-12 col-xl-4">
+                        <div class="card m-b-30 shadow bg-white rounded">
+                            <div class="card-body"><a href="" class="btn btn-primary btn-sm float-right">More Info</a>
+                                <h5 class=" mt-0 pb-3">Revenue By Country</h5>
+                                <ul class="list-unstyled list-inline text-center">
+                                    <li class="list-inline-item">
+                                        <p><i class="mdi mdi-checkbox-blank-circle text-primary mr-2"></i>Canada</p>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <p><i class="mdi mdi-checkbox-blank-circle text-info mr-2"></i>USA</p>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <p><i class="mdi mdi-checkbox-blank-circle text-greylight mr-2"></i>London</p>
+                                    </li>
+                                </ul>
+                                <div id="morris-donut-chart" style="height:345px;">
+                                    <svg height="345" version="1.1" width="289.656" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; left: -0.328125px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.2</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><path fill="none" stroke="#40a4f1" d="M144.828,262.38533333333334A89.88533333333334,89.88533333333334,0,0,0,229.82160677047386,201.74824706867932" stroke-width="2" opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;"></path><path fill="#40a4f1" stroke="#ffffff" d="M144.828,265.38533333333334A92.88533333333334,92.88533333333334,0,0,0,232.6583412059556,202.72443237001923L267.5905194299079,214.7453951007858A129.828,129.828,0,0,1,144.828,302.328Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#5b6be8" d="M229.82160677047386,201.74824706867932A89.88533333333334,89.88533333333334,0,0,0,64.20815789802549,132.7531232938091" stroke-width="2" opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;"></path><path fill="#5b6be8" stroke="#ffffff" d="M232.6583412059556,202.72443237001923A92.88533333333334,92.88533333333334,0,0,0,61.51740160512723,131.42653723469778L28.382830668535306,115.09066170589915A129.828,129.828,0,0,1,267.5905194299079,214.7453951007858Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#c1c5e2" d="M64.20815789802549,132.7531232938091A89.88533333333334,89.88533333333334,0,0,0,144.79976169017797,262.38532889767" stroke-width="2" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></path><path fill="#c1c5e2" stroke="#ffffff" d="M61.51740160512723,131.42653723469778A92.88533333333334,92.88533333333334,0,0,0,144.7988192123974,265.3853287496259L144.78564253526696,307.32799334650497A134.828,134.828,0,0,1,23.89823684703822,112.87968494071363Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="144.828" y="162.5" text-anchor="middle" font-family="&quot;Arial&quot;" font-size="15px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: Arial; font-size: 15px; font-weight: 800;" font-weight="800" transform="matrix(2.0428,0,0,2.0428,-151.0338,-180.9342)" stroke-width="0.48951256415581335"><tspan dy="6" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">London</tspan></text><text x="144.828" y="182.5" text-anchor="middle" font-family="&quot;Arial&quot;" font-size="14px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: Arial; font-size: 14px;" transform="matrix(1.8726,0,0,1.8726,-126.4673,-152.2706)" stroke-width="0.5340137063517963"><tspan dy="5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">20</tspan></text></svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- carousel part -->
+                    <div class="row mt-4 p-0 m-0">
+                        <div class="col-md-12 col-lg-6 col-xl-4">
+                            <div class="card bg-info shadow rounded">
+                                <div class="card-body">
+                                    <div id="verticalCarousel" class="carousel slide vertical" data-ride="carousel">
+                                        <!-- Carousel items -->
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <div class="row d-flex justify-content-center text-center">
+                                                    <div class="col-sm-12 carousel-icon">
+                                                        <i class="fab fa-twitter fa-3x text-white pt-3"></i></div>
+                                                    <div class="col-6 text-white">
+                                                        <h2>54k</h2>
+                                                        <p class="">Followers</p>
+                                                    </div>
+                                                    <div class="col-6 text-white">
+                                                        <h2>44k</h2>
+                                                        <p class="">Tweets</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="row d-flex justify-content-center">
+                                                    <div class="col-sm-12 carousel-icon text-center"><i class="fab fa-twitter fa-3x text-white pt-3"></i></div>
+                                                    <div class="col-sm-10 mx-auto text-white text-center">
+                                                        <p>Lorem Ipsum is simply dummy text of the <span class="warning">#TWITTER</span> and typesetting industry. A description list is perfect for defining terms.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card bg-primary mt-4 shadow rounded mt-3">
+                                <div class="card-body">
+                                    <div id="verticalCarousel2" class="carousel slide" data-ride="carousel">
+                                        <!-- Carousel items -->
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <div class="row d-flex justify-content-center">
+                                                    <div class="col-lg-12 carousel-icon text-center"><i class="fab fa-facebook-f fa-3x text-white pt-3"></i></div>
+                                                    <div class="col-sm-10 mx-auto text-white text-center">
+                                                        <p>Lorem Ipsum is simply dummy text of the <mark>FACEBOOK </mark>and typesetting industry.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <div class="row d-flex justify-content-center text-white text-center">
+                                                    <div class="col-sm-12 carousel-icon"><i class="fab fa-facebook-f fa-3x text-white pt-3"></i></div>
+                                                    <div class="col-6">
+                                                        <h2>54k</h2>
+                                                        <p class="">Followers</p>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <h2>44k</h2>
+                                                        <p class="">Posts</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-6 col-xl-4">
+                            <div class="card bg-white m-b-30 shadow bg-white rounded">
+                                <div class="card-body new-user">
+                                    <div class="row text-center">
+                                        <div class="col-6">
+                                            <h5><i class="mdi mdi-database mr-2 text-primary"></i> 5 TB</h5>
+                                            <h6 class="text-lightdark">Bandwidth usage</h6><span class="text-muted"><small>June 2018</small></span></div>
+                                        <div class="col-6">
+                                            <h5><i class="mdi mdi-download mr-2 text-success"></i>5412</h5>
+                                            <h6 class="text-lightdark">Download count</h6><span class="text-muted"><small>June 2018</small></span></div>
+                                    </div>
+                                    <div id="morris-area-chart" style="height: 310px">
+                                        <svg height="310" version="1.1" width="289.656" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; left: -0.65625px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.2</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><path fill="#4fb6e3" stroke="none" d="M25,220C33.55244818146265,194,50.65734454438795,119.24555403556772,59.209792725850605,116C67.78567227219398,112.74555403556772,84.93743136488072,205.390560875513,93.5133109112241,194C102.06575909268675,182.640560875513,119.17065545561205,29.875,127.7231036370747,25C136.27555181853734,20.125,153.38044818146267,146.875,161.9328963629253,155C170.48534454438794,163.125,187.59024090731327,85.13166894664843,196.1426890887759,90C204.71856863511928,94.88166894664843,221.87032772780603,187.49110807113544,230.4462072741494,194C238.99865545561204,200.49110807113544,256.10355181853737,155,264.656,142L264.656,285L25,285Z" fill-opacity="0.1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 0.1;"></path><path fill="none" stroke="#03a9f3" d="M25,220C33.55244818146265,194,50.65734454438795,119.24555403556772,59.209792725850605,116C67.78567227219398,112.74555403556772,84.93743136488072,205.390560875513,93.5133109112241,194C102.06575909268675,182.640560875513,119.17065545561205,29.875,127.7231036370747,25C136.27555181853734,20.125,153.38044818146267,146.875,161.9328963629253,155C170.48534454438794,163.125,187.59024090731327,85.13166894664843,196.1426890887759,90C204.71856863511928,94.88166894664843,221.87032772780603,187.49110807113544,230.4462072741494,194C238.99865545561204,200.49110807113544,256.10355181853737,155,264.656,142" stroke-width="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><circle cx="25" cy="220" r="0" fill="#03a9f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="59.209792725850605" cy="116" r="0" fill="#03a9f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="93.5133109112241" cy="194" r="0" fill="#03a9f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="127.7231036370747" cy="25" r="0" fill="#03a9f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="161.9328963629253" cy="155" r="0" fill="#03a9f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="196.1426890887759" cy="90" r="0" fill="#03a9f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="230.4462072741494" cy="194" r="0" fill="#03a9f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="264.656" cy="142" r="0" fill="#03a9f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><path fill="#1ed4a7" stroke="none" d="M25,259C33.55244818146265,246,50.65734454438795,207,59.209792725850605,207C67.78567227219398,207,84.93743136488072,267.1361149110807,93.5133109112241,259C102.06575909268675,250.8861149110807,119.17065545561205,148.5,127.7231036370747,142C136.27555181853734,135.5,153.38044818146267,202.125,161.9328963629253,207C170.48534454438794,211.875,187.59024090731327,174.50889192886456,196.1426890887759,181C204.71856863511928,187.50889192886456,221.87032772780603,254.11833105335157,230.4462072741494,259C238.99865545561204,263.8683310533516,256.10355181853737,229.75,264.656,220L264.656,285L25,285Z" fill-opacity="0.1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 0.1;"></path><path fill="none" stroke="#00c292" d="M25,259C33.55244818146265,246,50.65734454438795,207,59.209792725850605,207C67.78567227219398,207,84.93743136488072,267.1361149110807,93.5133109112241,259C102.06575909268675,250.8861149110807,119.17065545561205,148.5,127.7231036370747,142C136.27555181853734,135.5,153.38044818146267,202.125,161.9328963629253,207C170.48534454438794,211.875,187.59024090731327,174.50889192886456,196.1426890887759,181C204.71856863511928,187.50889192886456,221.87032772780603,254.11833105335157,230.4462072741494,259C238.99865545561204,263.8683310533516,256.10355181853737,229.75,264.656,220" stroke-width="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><circle cx="25" cy="259" r="0" fill="#00c292" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="59.209792725850605" cy="207" r="0" fill="#00c292" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="93.5133109112241" cy="259" r="0" fill="#00c292" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="127.7231036370747" cy="142" r="0" fill="#00c292" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="161.9328963629253" cy="207" r="0" fill="#00c292" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="196.1426890887759" cy="181" r="0" fill="#00c292" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="230.4462072741494" cy="259" r="0" fill="#00c292" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="264.656" cy="220" r="0" fill="#00c292" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-lg-12 col-xl-4">
+                            <div class="card bg-white m-b-30 shadow bg-white rounded"><img src="images/wather.jpg" alt="" class="img-fluid">
+                                <div class="card-body bg-primary">
+                                    <div class="row">
+                                        <div class="col-6 align-self-center">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-sm-6 text-center"><canvas id="partly-cloudy-day" width="70" height="70"></canvas>
+                                                    <h6 class="text-white">SUNDAY <span>25<sup>th</sup></span></h6>
+                                                </div>
+                                                <div class="col-lg-6 col-sm-6 text-center align-self-center">
+                                                    <h5 class="mt-0 text-white"><b>32°</b></h5>
+                                                    <p class="text-white">Partly cloudy</p>
+                                                    <p class="text-white">15km/h - 37%</p>
+                                                </div>
+                                            </div>
+                                            <!-- End row -->
+                                        </div>
+                                        <div class="col-6 align-self-center">
+                                            <div class="row">
+                                                <div class="col-6 text-center">
+                                                    <h6 class="text-white mt-0">MON</h6><canvas id="rain" width="28" height="35"></canvas>
+                                                    <h6 class="text-white">38°<i class="wi-degrees"></i></h6>
+                                                </div>
+                                                <div class="col-6 text-center">
+                                                    <h6 class="text-white mt-0">TUE</h6><canvas id="wind" width="35" height="35"></canvas>
+                                                    <h6 class="text-white">32°<i class="wi-degrees"></i></h6>
+                                                </div>
+                                            </div>
+                                            <!-- end row -->
+                                        </div>
+                                    </div>
+                                    <!-- end row -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- end of carousel -->
+                <div class="row mt-5">
+                    <div class="col-md-12 col-lg-12 col-xl-8 align-self-center">
+                        <div class="card bg-white m-b-30 shadow bg-white rounded">
+                            <div class="card-body">
+                                <h5 class=" mb-4 mt-0">Members Profiles</h5>
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th class="border-top-0" style="width:60px;">Member</th>
+                                                <th class="border-top-0">Name</th>
+                                                <th class="border-top-0">Country</th>
+                                                <th class="border-top-0">Earnings</th>
+                                                <th class="border-top-0">Sales</th>
+                                                <th class="border-top-0">Reviews</th>
+                                                <th class="border-top-0">Progress</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><img class="rounded-circle" src="images/avatar-2.jpg" alt="user" width="40"></td>
+                                                <td><a href="">Ruby T. Curd</a></td>
+                                                <td><img src="images/us_flag.jpg" alt="" style="width:30px"></td>
+                                                <td>$100</td>
+                                                <td>10</td>
+                                                <td><i class="mdi mdi-star text-warning"></i> <i class="mdi mdi-star text-warning"></i> <i class="mdi mdi-star text-warning"></i> <i class="mdi mdi-star-half text-warning"></i> <i class="mdi mdi-star-outline
+                                            text-warning"></i></td>
+                                                <td>
+                                                    <div class="progress" style="height:8px;">
+                                                        <div class="progress-bar bg-primary" style="width: 94%;"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><img class="rounded-circle" src="images/avatar-3.jpg" alt="user" width="40"></td>
+                                                <td><a href="">William A. Johnson</a></td>
+                                                <td><img src="images/french_flag.jpg" alt="" style="width:30px"></td>
+                                                <td>$490</td>
+                                                <td>24</td>
+                                                <td><i class="mdi mdi-star text-warning"></i> <i class="mdi mdi-star text-warning"></i> <i class="mdi mdi-star text-warning"></i> <i class="mdi mdi-star-half text-warning"></i> <i class="mdi mdi-star-outline
+                                            text-warning"></i></td>
+                                                <td>
+                                                    <div class="progress" style="height:8px;">
+                                                        <div class="progress-bar bg-success" style="width: 38%;"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><img class="rounded-circle" src="images/avatar-4.jpg" alt="user" width="40"></td>
+                                                <td><a href="">Bobby M. Gray</a></td>
+                                                <td><img src="images/spain_flag.jpg" alt="" style="width:30px"></td>
+                                                <td>$380</td>
+                                                <td>19</td>
+                                                <td><i class="mdi mdi-star text-warning"></i> <i class="mdi mdi-star text-warning"></i> <i class="mdi mdi-star text-warning"></i> <i class="mdi mdi-star-half text-warning"></i> <i class="mdi mdi-star-outline
+                                            text-warning"></i></td>
+                                                <td>
+                                                    <div class="progress" style="height:8px;">
+                                                        <div class="progress-bar bg-dark" style="width:65%;"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><img class="rounded-circle" src="images/avatar-5.jpg" alt="user" width="40"></td>
+                                                <td><a href="">Robert N. Carlile</a></td>
+                                                <td><img src="images/russia_flag.jpg" alt="" style="width:30px"></td>
+                                                <td>$450</td>
+                                                <td>30</td>
+                                                <td><i class="mdi mdi-star text-warning"></i> <i class="mdi mdi-star text-warning"></i> <i class="mdi mdi-star text-warning"></i> <i class="mdi mdi-star-half text-warning"></i> <i class="mdi mdi-star-outline
+                                            text-warning"></i></td>
+                                                <td>
+                                                    <div class="progress" style="height:8px;">
+                                                        <div class="progress-bar bg-danger" style="width: 88%;"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><img class="rounded-circle" src="images/avatar-6.jpg" alt="user" width="40"></td>
+                                                <td><a href="">Ruby T. Curd</a></td>
+                                                <td><img src="images/italy_flag.jpg" alt="" style="width:30px"></td>
+                                                <td>$500</td>
+                                                <td>40</td>
+                                                <td><i class="mdi mdi-star text-warning"></i> <i class="mdi mdi-star text-warning"></i> <i class="mdi mdi-star text-warning"></i> <i class="mdi mdi-star-half text-warning"></i> <i class="mdi mdi-star-outline
+                                            text-warning"></i></td>
+                                                <td>
+                                                    <div class="progress" style="height:8px;">
+                                                        <div class="progress-bar l-blue" style="width: 17%;"></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-12 col-xl-4">
+                        <div class="card bg-white m-b-30 shadow bg-white rounded" style="overflow: scroll; height: 520px;">
+                            <div class="card-body new-user">
+                                <h5 class="header-title mt-0 mb-4">New Users</h5>
+                                <ul class="list-unstyled mb-0 pr-0" id="boxscroll2" tabindex="1" style="overflow: hidden; outline: none;">
+                                    <li class="p-3 pr-0">
+                                        <div class="media">
+                                            <div>
+                                                <a href="#"><img class="rounded-circle" src="images/avatar-5.jpg" alt=""></a>
+                                            </div>
+                                            <div class="media-body">
+                                                <div>
+                                                    <p class="mb-0">Ruby T. Curd</p>
+                                                    <small class="text-muted">Newyork</small>
+                                                </div>
+                                                <div class="mt-1 ml-5">
+                                                    <i class="fa fa-circle text-success mr-0 ml-1"></i>
+                                                    <small class="text-muted">Now</small> </div>
+                                            </div>
+
+                                        </div>
+                                    </li>
+                                    <li class="p-3">
+                                        <div class="media">
+                                            <div>
+                                                <a href="#"><img class="rounded-circle" src="images/avatar-4.jpg" alt=""></a>
+                                            </div>
+                                            <div class="media-body">
+                                                <div>
+                                                    <p class="media-heading mb-0">William A. Johnson</p>
+                                                    <small class="text-muted">California</small>
+                                                </div>
+                                                <div class="ml-2">
+                                                    <i class="fa fa-circle text-success mr-0 ml-1"></i>
+                                                    <small class="text-muted">Now</small> </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="p-3">
+                                        <div class="media">
+                                            <div>
+                                                <a href="#"><img class="rounded-circle" src="images/avatar-3.jpg" alt=""></a>
+                                            </div>
+                                            <div class="media-body">
+                                                <div>
+                                                    <p class="media-heading mb-0">Robert N. Carlile</p>
+                                                    <small class="text-muted">India</small>
+                                                </div>
+                                                <div class="ml-5">
+                                                    <i class="fa fa-circle text-danger mr-0 ml-3"></i>
+                                                    <small class="text-muted">10 min ago</small> </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="p-3">
+                                        <div class="media">
+                                            <div>
+                                                <a href="#"><img class="rounded-circle" src="images/avatar-2.jpg" alt=""></a>
+                                            </div>
+                                            <div class="media-body">
+                                                <div>
+                                                    <p class="media-heading mb-0">Bobby M. Gray</p>
+                                                    <small class="text-muted">Australia</small>
+                                                </div>
+                                                <div class="ml-4">
+                                                    <i class="fa fa-circle text-success ml-3"></i>
+                                                    <small class="text-muted ml-2">Now</small> </div>
+                                            </div>
+
+                                        </div>
+                                    </li>
+                                    <li class="p-3">
+                                        <div class="media">
+                                            <div>
+                                                <a href="#"><img class="rounded-circle" src="images/avatar-1.jpg" alt=""></a>
+                                            </div>
+                                            <div class="media-body">
+                                                <div>
+                                                    <p class="media-heading mb-0">Ruby T. Curd </p>
+                                                    <small class="text-muted">New Zealand</small>
+                                                </div>
+                                                <div class="ml-5">
+                                                    <i class="fa fa-circle text-danger ml-4"></i>
+                                                    <small class="text-muted ml-2">10 min ago</small> </div>
+                                            </div>
+
+                                        </div>
+                                    </li>
+                                    <li class="p-3">
+                                        <div class="media">
+                                            <div>
+                                                <a href="#"><img class="rounded-circle" src="images/avatar-6.jpg" alt=""></a>
+                                            </div>
+                                            <div class="media-body">
+                                                <div>
+                                                    <p class="media-heading mb-0">Robert N. Carlile</p>
+                                                    <small class="text-muted">India</small>
+                                                </div>
+                                                <div class="ml-4">
+                                                    <i class="fa fa-circle text-success"></i>
+                                                    <small class="text-muted">Now</small> </div>
+                                            </div>
+
+                                        </div>
+                                    </li>
+                                    <li class="p-3">
+                                        <div class="media">
+                                            <div>
+                                                <a href=" #"><img class="rounded-circle" src="images/avatar-4.jpg" alt=""></a>
+                                            </div>
+                                            <div class="media-body">
+                                                <div>
+                                                    <p class="media-heading mb-0">Bobby M. Gray</p>
+                                                    <small class="text-muted">Australia</small>
+                                                </div>
+                                                <div class="ml-5">
+                                                    <i class="fa fa-circle text-danger ml-2"></i>
+                                                    <small class="text-muted">58 min ago</small> </div>
+                                            </div>
+
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="footer mt-4 text-center p-3 shadow bg-white rounded">&copy; 2019 Annex by Mannatthemes.</footer>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/1f1f9aaea7.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

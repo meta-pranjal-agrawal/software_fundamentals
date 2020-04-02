@@ -1,0 +1,286 @@
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Ubuntu', sans-serif;
+        /* z-index: -2; */
+    }
+    
+    .flexContainerNav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 2%;
+    }
+    
+    .flexContainerNav a,
+    i {
+        color: #dbdde3;
+        text-decoration: none;
+        padding: 10px;
+        font-weight: bolder;
+        font-size: 1.5em;
+    }
+    
+    .flexContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    
+    .flexContainer>div {
+        width: 50%;
+        padding: 8%;
+    }
+    
+    #firstPart h1 {
+        color: white;
+        padding-bottom: 10%;
+        font-size: 4em;
+    }
+    
+    .phone1img {
+        width: 100%;
+    }
+    
+    .btn {
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 5%;
+    }
+    
+    #downloadBtn {
+        background-color: tomato;
+    }
+    
+    #featuresBtn {
+        background-color: darkslateblue;
+        margin-left: 3%;
+    }
+    
+    .far,
+    .fas {
+        color: tomato;
+        font-size: 3em;
+    }
+    
+    .headings {
+        color: #648CFF;
+        text-align: center;
+        margin-top: 7%;
+        font-weight: bolder;
+        font-size: 2.5em;
+    }
+    
+    .divSpan {
+        width: 50%;
+        margin: auto;
+        text-align: center;
+        color: grey;
+        margin-top: 2%;
+        font-size: 1.5em;
+    }
+    
+    .iconsAndTextFlex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin: auto;
+        margin-top: 5%;
+        width: 90%;
+        font-size: 1.25em;
+        margin-bottom: 5%;
+    }
+    
+    .backText {
+        transform: rotate(90deg);
+        font-size: 11em;
+        margin-left: -18%;
+        margin-top: 10%;
+        color: grey;
+        z-index: 1;
+        opacity: 25%;
+    }
+    
+    .iconsAndTextFlex>section>p {
+        color: grey;
+    }
+    
+    .screenshots {
+        width: 50%;
+        margin: auto;
+    }
+    
+    #cloudyScreen {
+        margin-left: 10%;
+        z-index: 2;
+    }
+    
+    #cloudyImage01 {
+        margin-top: 10%;
+        margin-left: -30%;
+    }
+    
+    #cloudyPara {
+        color: gray;
+        margin-top: 4%;
+        font-size: 1em;
+        width: 90%;
+        font-size: 1.5em;
+    }
+    
+    #cloudyHeading {
+        font-size: 2em;
+        margin-top: -5%;
+    }
+    
+    #cloudyText01 {
+        margin-top: 20%;
+        margin-left: -30%;
+    }
+    
+    #sunnyText01 {
+        margin-top: 10%;
+        margin-left: -27%;
+        width: 60%;
+    }
+    
+    #sunImage {
+        margin-left: 10%;
+    }
+    
+    #sunnyPara {
+        color: gray;
+        margin-top: 4%;
+        font-size: 1.5em;
+    }
+    
+    #screenshotFlex02 {
+        margin-top: 15%;
+        width: 70%;
+    }
+    
+    #sunnyHeading {
+        font-size: 2em;
+    }
+    
+    #rainyScreen {
+        margin-left: 10%;
+    }
+    
+    #rainyImage {
+        margin-top: 10%;
+        margin-left: 15%;
+    }
+    
+    #rainyHeading {
+        font-size: 2em;
+    }
+    
+    #rainyPara {
+        color: gray;
+        margin-top: 4%;
+        font-size: 1.5em;
+    }
+    
+    #rainyText01 {
+        margin-top: 14%;
+        margin-left: -10%;
+    }
+    
+    .fa-quote-left,
+    .fa-quote-right {
+        color: slateblue;
+        font-size: 2em;
+    }
+    
+    .iconsAndTextFlex>div>p {
+        font-size: 1.5em;
+        margin-bottom: -3%;
+    }
+    
+    .fa-quote-right {
+        margin-top: 4%;
+        margin-left: 50%;
+    }
+    
+    #McLaughlinQuote {
+        width: 45%;
+    }
+    
+    #HazelittQuote {
+        margin-left: 10%;
+    }
+    
+    #bottomContent {
+        color: white;
+        /* margin-top: 10%;
+        margin-left: 5%; */
+        padding: 10%;
+    }
+    
+    #downloadHeading {
+        font-size: 2em;
+        margin-left: -5%;
+    }
+    
+    #playstoreImages {
+        width: 25%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: -7%;
+        margin-left: 4%;
+    }
+    
+    #appdownloadImage {
+        margin-top: -20%;
+        margin-left: 45%;
+    }
+    
+    #downloadContent {
+        width: 40%;
+        font-size: x-large;
+        margin-left: -5%;
+        font-weight: bolder;
+    }
+    
+    footer {
+        background-color: #353854;
+        width: 100%;
+        height: 30%;
+        padding-top: 20px;
+    }
+    
+    footer>div {
+        width: 33%;
+    }
+    
+    #lineImage {
+        width: 250%;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 0%;
+        margin-bottom: 5%;
+    }
+    
+    #bottomNav a {
+        color: grey;
+        text-decoration: none;
+        padding: 10px;
+        font-weight: bolder;
+        font-size: larger;
+    }
+    
+    #bottomMostHeading {
+        width: 10%;
+        margin: auto;
+        color: grey;
+    }

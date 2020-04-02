@@ -1,0 +1,123 @@
+<html>
+
+<head>
+    <title>MetacubeParking</title>
+    <link rel="stylesheet" href="UISession7.css">
+</head>
+
+<body>
+
+
+    <h1>
+        Metacube Parking System
+    </h1>
+
+    <fieldset>
+
+        <legend id="formTitle"> Employee Registration Form </legend>
+
+        <form id="empRegistrationForm">
+            <label id="messageFieldEmployee">Enter your name</label>
+
+            <input id="empName" type="text" required placeholder="Name" autofocus>
+
+            <br> <br>
+            <div id="empGender">
+
+                <label><input type="radio" name="gender" checked="checked"> Male </label>
+                <label><input type="radio" name="gender"> Female  </label>
+            </div>
+            <br>
+            <br>
+
+            <input type="email" id="empMail" required placeholder="Email id" autofocus> <br> <br>
+
+            <input type="password" id="empPassword" required placeholder="Password" onkeyup="return validatePassword()"> <br> <br>
+            <input type="password" id="empConfirmPassword" required placeholder="Confirm Password"> <br> <br>
+
+            <input type="text" id="empPhoneNumber" required placeholder="Phone number"> <br> <br>
+
+            <!-- <input type="button" value="submit"> -->
+            <br>
+            <br>
+
+        </form>
+    </fieldset>
+
+
+    <fieldset id="vehicleFieldSet">
+
+        <legend id="formTitle"> Vehicle Registration Form </legend>
+
+        <form id="vehicleRegistrationForm">
+            <label id="vehicleLabel">Enter name of your vehicle</label>
+            <br>
+            <input type="text" id="empVehicleName" required placeholder="Vehicle Name"> <br> <br>
+
+            <select id="empVehicleType">
+                    
+                     <option>
+                         Cycle
+                     </option>
+                     <option>
+                        Bike
+                    </option>
+                    <option>
+                        Car
+                    </option>
+    
+                 </select>
+            <br> <br>
+
+            <input type="text" required placeholder="Vehicle Number"> <br> <br>
+            <input type="text" readonly required placeholder="Employee id" id="empId"> <br> <br>
+            <textarea rows="5" placeholder="Identification" id="vehicleIdentification"></textarea> <br> <br>
+
+            <!-- <input type="button" onclick="vehicleRegister()"> -->
+            <br> <br>
+        </form>
+    </fieldset>
+
+
+    <fieldset id="passesFieldSet">
+        <legend id="passes form">Passes</legend>
+        <form id="passesForm">
+            <label id="passesLabel">Hey what type pass do you want?</label>
+            <br>
+            <label>
+           
+            <input type="radio" name="passes" checked="true">
+            Daily </label> <br>
+            <input type="text" id="daily" disabled>
+            <br> <br>
+            <label>
+            <input type="radio" name="passes">
+            Monthly</label> <br>
+            <input type="text" id="monthly" disabled>
+            <br> <br>
+            <label>
+            <input type="radio" name="passes">
+            Yearly </label> <br>
+            <input type="text" id="yearly" disabled>
+            <br> <br>
+
+            <select id="currencySelector" onclick="currencyChanger()">
+                <option>INR</option>
+                <option> USD </option>
+                <option> YEN </option> 
+            </select>
+
+            <br> <br>
+
+            <input type="submit" value="Get Pass">
+
+
+
+        </form>
+    </fieldset>
+
+
+    <script src="UISession71.js"></script>
+</body>
+
+</html>
